@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+
+  @media (max-width: 48em) {
+    column-gap: 1.6rem;
+    font-size: 3.2rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+
+    &::after {
+      content: "";
+      width: 2rem;
+      height: 0.2rem;
+      background-color: #808d97;
+    }
+
+    @media (max-width: 48em) {
+      column-gap: 1.6rem;
+
+      &::after {
+        width: 3.2rem;
+        height: 1px;
+      }
+    }
+  }
+
+  &__txt {
+    color: $blue;
+  }
+}

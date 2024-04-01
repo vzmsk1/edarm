@@ -1,0 +1,63 @@
+// --------------------------------- mixins ---------------------------------
+
+@import "./mixins";
+
+// -------------------------------- variables -------------------------------
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$blue: #004780;
+$gray: #f2f2f2;
+$fontColor: #001b30;
+$lightBlue: #a6bdd0;
+$red: #d90000;
+
+// ---------------------------------- fonts ---------------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wdth@75&display=swap");
+
+// local fonts
+@import "./fonts";
+
+// ------------------------------- base styles ------------------------------
+
+// base scss file
+@import "./set";
+
+// html, body
+html {
+  &.lock {
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
+html,
+body {
+  overflow-x: clip;
+}
+
+// main
+main {
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+// --------------------------------------------------------------------------
+
+// header / footer
+@import "./sections/header";
+@import "./sections/footer";
+
+// ui
+@import "../ui/ui";
+
+// --------------------------------------------------------------------------
+
+@import "./dev/vzmsk1.scss";
+@import "./dev/markusDM.scss";
+@import "./dev/ukik0.scss";

@@ -1,0 +1,63 @@
+.tabs {
+  &__navigation {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+  &__body {
+    padding-top: 1rem;
+  }
+}
+
+.tab {
+  padding: 0 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  height: 10rem;
+  background-color: $gray;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  @media (max-width: 48em) {
+    padding: 0 2.4rem;
+    height: 11.2rem;
+  }
+
+  svg {
+    flex: 0 0 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: translate(0.3rem, -0.3rem);
+    transition: fill 0.3s ease;
+
+    @media (max-width: 48em) {
+      flex: 0 0 3.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      transform: translate(0.6rem, -0.6rem);
+    }
+  }
+
+  &__num {
+    margin-right: 0.8rem;
+
+    @media (max-width: 48em) {
+      margin-right: 1.6rem;
+    }
+  }
+
+  &__txt {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &._is-active {
+    background-color: $blue;
+    color: $white;
+
+    svg {
+      fill: $white;
+    }
+  }
+}

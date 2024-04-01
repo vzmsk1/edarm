@@ -1,0 +1,61 @@
+.h {
+  font-family: "Bahnschrift";
+  line-height: 120%;
+
+  &_h1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+
+    @media (max-width: 48em) {
+      font-size: 5.6rem;
+    }
+  }
+
+  &_h2 {
+    font-size: 6rem;
+
+    @media (max-width: 48em) {
+      font-size: 5.6rem;
+    }
+  }
+
+  &_h3 {
+    font-size: 3.2rem;
+
+    @media (max-width: 48em) {
+      font-size: 4.4rem;
+      line-height: 1;
+    }
+  }
+
+  &_h4 {
+    font-size: 2.4rem;
+
+    @media (max-width: 48em) {
+      font-size: 4.4rem;
+      line-height: 1;
+    }
+  }
+}
+
+.txt24 {
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+
+  @media (max-width: 48em) {
+    font-size: 4rem;
+  }
+}
+
+.txt22 {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+
+  &_sb {
+    font-family: "Bahnschrift";
+  }
+
+  @media (max-width: 48em) {
+    font-size: 3.6rem;
+  }
+}
