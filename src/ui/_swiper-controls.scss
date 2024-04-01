@@ -1,0 +1,20 @@
+.swiper-pagination-custom {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-family: Bahnschrift;
+    color: $white;
+
+    &__current {
+    }
+
+    &__divider,
+    &__total {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    &__total {
+        color: #808385;
+    }
+}
