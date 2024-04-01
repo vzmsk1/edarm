@@ -1,19 +1,22 @@
-import "../scss/style.scss";
+import '../scss/style.scss';
 
 // ---------------------------------- utils ---------------------------------
 
-import * as utils from "./utils/utils.js";
+import * as utils from './utils/utils.js';
 
 // hamburger menu
 utils.menuInit();
 
+// set current year
+utils.setCurrentYear();
+
 // ------------------------------- components -------------------------------
 
 // forms
-import "./utils/forms";
+import './utils/forms';
 
 // tabs
-import "./utils/tabs.js";
+import './utils/tabs.js';
 
 // accordion
 // import "./utils/accordion.js";
@@ -22,10 +25,10 @@ import "./utils/tabs.js";
 // import "./utils/select.js";
 
 // modals
-import "./utils/modals.js";
+import './utils/modals.js';
 
 // --------------------------------------------------------------------------
 
-import "./dev/vzmsk1.js";
-import "./dev/markusDM.js";
-import "./dev/ukik0.js";
+import './dev/vzmsk1.js';
+import './dev/markusDM.js';
+import './dev/ukik0.js';

@@ -1,6 +1,6 @@
 // --------------------------------- mixins ---------------------------------
 
-@import "./mixins";
+@import './mixins';
 
 // -------------------------------- variables -------------------------------
 
@@ -15,49 +15,53 @@ $red: #d90000;
 
 // ---------------------------------- fonts ---------------------------------
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wdth@75&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@75,100..900&display=swap');
 
 // local fonts
-@import "./fonts";
+@import './fonts';
 
 // ------------------------------- base styles ------------------------------
 
 // base scss file
-@import "./set";
+@import './set';
 
 // html, body
 html {
-  &.lock {
-    overflow: hidden;
-    pointer-events: none;
-  }
+    &.lock {
+        overflow: hidden;
+        pointer-events: none;
+    }
 }
 html,
 body {
-  overflow-x: clip;
+    overflow-x: clip;
 }
 
 // main
 main {
-  position: relative;
+    position: relative;
+    flex: 1 1 auto;
 }
 
 .wrapper {
-  margin: 0 auto;
-  max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 1920px;
 }
 
 // --------------------------------------------------------------------------
 
 // header / footer
-@import "./sections/header";
-@import "./sections/footer";
+@import './sections/header';
+@import './sections/footer';
 
 // ui
-@import "../ui/ui";
+@import '../ui/ui';
 
 // --------------------------------------------------------------------------
 
-@import "./dev/vzmsk1.scss";
-@import "./dev/markusDM.scss";
-@import "./dev/ukik0.scss";
+@import './dev/vzmsk1.scss';
+@import './dev/markusDM.scss';
+@import './dev/ukik0.scss';
