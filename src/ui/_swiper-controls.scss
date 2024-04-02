@@ -9,16 +9,22 @@
     }
 
     &__current {
-        transform: translateY(-0.4rem);
+        @media (min-width: 48em) {
+            transform: translateY(-0.4rem);
+        }
     }
 
     &__divider,
     &__total {
-        font-size: 1.6rem;
         font-weight: 600;
     }
 
     &__total {
+        font-size: 1.6rem;
         color: #808385;
+
+        @media (max-width: 48em) {
+            font-size: 3rem;
+        }
     }
 }
