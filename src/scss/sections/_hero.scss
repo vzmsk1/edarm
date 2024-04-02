@@ -7,7 +7,7 @@
         position: absolute;
         z-index: 2;
         left: 0;
-        bottom: 11.6rem;
+        bottom: 11rem;
     }
 
     &__swiper-navigation {
@@ -43,7 +43,7 @@
         padding-top: 30.9rem;
         display: flex;
         justify-content: space-between;
-        column-gap: 16.5rem;
+        column-gap: 32.5rem;
         height: 100%;
     }
 
@@ -55,12 +55,14 @@
 
     &__heading {
         margin-bottom: 4rem;
-        max-width: 102rem;
-        font-size: 6rem;
+        max-width: 86rem;
     }
 
     &__text {
+        padding-top: 0.8rem;
+        margin-right: auto;
         max-width: 42.8rem;
+        line-height: 2.4rem;
     }
 
     &__bg {
@@ -89,8 +91,8 @@
 
     &__progressbar {
         position: relative;
-        flex: 0 0 44.4rem;
-        width: 44.4rem;
+        flex: 0 0 44rem;
+        width: 44rem;
         height: 0.2rem;
         background-color: rgba(255, 255, 255, 0.4);
         --progress: 0;
@@ -130,8 +132,8 @@
     }
 
     &::after {
-        top: -39.2rem;
-        right: -3.7rem;
+        top: -49.2rem;
+        right: -8.7rem;
         width: 67.3rem;
         height: 67.3rem;
         background: url('./assets/images/bg-figures/el-2.svg') bottom / contain no-repeat;
@@ -141,8 +143,8 @@
         position: relative;
         z-index: 3;
         padding: 6rem 12rem;
-        display: grid;
-        grid-template-columns: 4fr 6fr;
+        display: flex;
+        column-gap: 35.1rem;
     }
 
     &__text {
