@@ -1,0 +1,109 @@
+.documentation {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+    }
+}
+
+.documentation-card {
+    position: relative;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $gray;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+
+    @media (max-width: 48em) {
+        padding: 3.2rem 2.4rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $blue;
+            &::after {
+                background: url(./assets/images/bg-figures/el-4.svg) center / contain no-repeat;
+            }
+            .documentation-card__heading,
+            .documentation-card__btn.btn {
+                color: $white;
+            }
+            .documentation-card__btn.btn::after {
+                background-color: $white;
+            }
+            svg {
+                rect,
+                path,
+                circle {
+                    stroke: $white;
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75.2rem;
+        height: 75.2rem;
+        border-radius: 50%;
+        background: url(./assets/images/bg-figures/el-3.svg) center / contain no-repeat;
+        transform: translate(7rem, -32rem);
+
+        @media (max-width: 48em) {
+            width: 65rem;
+            height: 65rem;
+            transform: translate(32rem, -23rem);
+        }
+    }
+
+    &__icon {
+        margin-bottom: 14.1rem;
+        svg {
+            width: 8rem;
+            height: 8rem;
+
+            rect,
+            path,
+            circle {
+                stroke: $fontColor;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__heading {
+        margin-bottom: 1.2rem;
+        transition: color 0.3s ease;
+
+        @media (max-width: 48em) {
+            margin-bottom: 1.6rem;
+            font-size: 4rem;
+        }
+    }
+
+    &__btn {
+        color: $black;
+        transition: color 0.3s ease;
+        &::after {
+            background-color: $black;
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        @media (max-width: 48em) {
+            font-size: 3.6rem;
+        }
+    }
+}

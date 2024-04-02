@@ -1,275 +1,243 @@
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 textarea:focus,
 input:focus {
-  outline: none;
+    outline: none;
+}
+textarea {
+    resize: none;
+    &::placeholder {
+        color: #4d5f6e;
+    }
 }
 
 .input {
-  position: relative;
+    position: relative;
 
-  &_file {
-    .input {
-      &__field {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-      }
+    &_file {
+        .input {
+            &__field {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
 
-      &__placeholder {
-        display: inline-flex;
-        align-items: center;
-        column-gap: 1.2rem;
-        line-height: 2.6rem;
+            &__placeholder {
+                display: inline-flex;
+                align-items: center;
+                column-gap: 1.2rem;
+                line-height: 2.6rem;
 
-        &::after {
-          content: "";
-          flex: 0 0 2.4rem;
-          width: 2.4rem;
-          height: 2.4rem;
-          background: url("./assets/images/icons/clip.svg") center / contain
-            no-repeat;
+                &::after {
+                    content: '';
+                    flex: 0 0 2.4rem;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: url('./assets/images/icons/clip.svg') center / contain no-repeat;
+                }
+
+                @media (max-width: 48em) {
+                    column-gap: 3rem;
+                    line-height: 4.1rem;
+
+                    &::after {
+                        flex: 0 0 4.8rem;
+                        width: 4.8rem;
+                        height: 4.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &:not(&_file) {
+        .input__field {
+            padding-bottom: 1.6rem;
+            display: block;
+            width: 100%;
+            line-height: 1;
+            border-bottom: 1px solid $lightBlue;
+            transition:
+                color 0.3s ease,
+                border-bottom 0.3s ease;
+
+            &::placeholder {
+                color: #4d5f6e;
+                transition: color 0.3s ease;
+            }
         }
 
-        @media (max-width: 48em) {
-          column-gap: 3rem;
-          line-height: 4.1rem;
-
-          &::after {
-            flex: 0 0 4.8rem;
-            width: 4.8rem;
-            height: 4.8rem;
-          }
+        &._is-filled {
+            .input__field {
+                border-bottom: 1px solid $black;
+                color: $black;
+            }
         }
-      }
-    }
-  }
 
-  &:not(&_file) {
-    .input__field {
-      padding-bottom: 1.6rem;
-      display: block;
-      width: 100%;
-      line-height: 1;
-      border-bottom: 1px solid $lightBlue;
-      transition:
-        color 0.3s ease,
-        border-bottom 0.3s ease;
+        &._has-error {
+            &::after {
+                content: attr(data-hint);
+                position: absolute;
+                bottom: -0.4rem;
+                left: 0;
+                font-size: 1.4rem;
+                color: $red;
+                white-space: nowrap;
+                transform: translateY(100%);
 
-      &::placeholder {
-        color: #4d5f6e;
-        transition: color 0.3s ease;
-      }
-    }
-
-    &._is-filled {
-      .input__field {
-        border-bottom: 1px solid $black;
-        color: $black;
-      }
-    }
-
-    &._has-error {
-      &::after {
-        content: attr(data-hint);
-        position: absolute;
-        bottom: -0.4rem;
-        left: 0;
-        font-size: 1.4rem;
-        color: $red;
-        white-space: nowrap;
-        transform: translateY(100%);
-
-        @media (max-width: 48em) {
-          bottom: -0.8rem;
-          font-size: 2rem;
+                @media (max-width: 48em) {
+                    bottom: -0.8rem;
+                    font-size: 2rem;
+                }
+            }
+            .input__field {
+                border-bottom: 1px solid $red;
+            }
         }
-      }
-      .input__field {
-        border-bottom: 1px solid $red;
-      }
     }
-  }
-  //
-  //  // .input__label
-  //
-  //  &__label {
-  //    position: relative;
-  //    display: flex;
-  //    align-items: center;
-  //    justify-content: space-between;
-  //    column-gap: 3rem;
-  //    white-space: nowrap;
-  //  }
-  //
-  //  &._has-focus {
-  //    .input__field {
-  //      border: 1px solid $black;
-  //    }
-  //  }
-  //  &._has-error {
-  //    .input__label {
-  //      color: transparent;
-  //      &::after {
-  //        content: attr(data-hint);
-  //        position: absolute;
-  //        top: 0;
-  //        left: 0;
-  //        color: $red;
-  //        white-space: nowrap;
-  //      }
-  //    }
-  //    .input__field {
-  //      border: 1px solid $red;
-  //      color: $red;
-  //      &::placeholder {
-  //        color: $red;
-  //      }
-  //    }
-  //  }
 }
 
 .option {
-  position: relative;
-  cursor: pointer;
-
-  &__input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    appearance: none;
-
-    &:checked + .option__txt::after {
-      transform: scale(1);
-    }
-  }
-
-  &__txt {
-    display: inline-flex;
-    align-items: center;
+    position: relative;
     cursor: pointer;
-    column-gap: 0.8rem;
 
-    @media (max-width: 48em) {
-      column-gap: 1.6rem;
+    &__input {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        appearance: none;
+
+        &:checked + .option__txt::after {
+            transform: scale(1);
+        }
     }
 
-    &::before,
-    &::after {
-      content: "";
-      border-radius: 50%;
+    &__txt {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        column-gap: 0.8rem;
+
+        @media (max-width: 48em) {
+            column-gap: 1.6rem;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            border-radius: 50%;
+        }
+
+        &::before {
+            flex: 0 0 2.4rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            border: 1.5px solid $blue;
+
+            @media (max-width: 48em) {
+                flex: 0 0 4.8rem;
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            left: 0.4rem;
+            top: 0.4rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: $blue;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+
+            @media (max-width: 48em) {
+                top: 0.8rem;
+                left: 0.8rem;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
     }
-
-    &::before {
-      flex: 0 0 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      border: 1.5px solid $blue;
-
-      @media (max-width: 48em) {
-        flex: 0 0 4.8rem;
-        width: 4.8rem;
-        height: 4.8rem;
-      }
-    }
-
-    &::after {
-      position: absolute;
-      left: 0.4rem;
-      top: 0.4rem;
-      width: 1.6rem;
-      height: 1.6rem;
-      background-color: $blue;
-      transform: scale(0);
-      transition: transform 0.3s ease;
-
-      @media (max-width: 48em) {
-        top: 0.8rem;
-        left: 0.8rem;
-        width: 3.2rem;
-        height: 3.2rem;
-      }
-    }
-  }
 }
 
 .checkbox {
-  position: relative;
-  display: inline-flex;
-
-  &__input {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    appearance: none;
-
-    &:checked + .checkbox__txt {
-      &::before {
-        border: 1px solid $blue;
-      }
-      &::after {
-        transform: scale(1);
-      }
-    }
-  }
-
-  &__txt {
     position: relative;
     display: inline-flex;
-    align-items: center;
-    column-gap: 0.8rem;
-    cursor: pointer;
 
-    @media (max-width: 48em) {
-      column-gap: 1.6rem;
+    &__input {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        appearance: none;
+
+        &:checked + .checkbox__txt {
+            &::before {
+                border: 1px solid $blue;
+            }
+            &::after {
+                transform: scale(1);
+            }
+        }
     }
 
-    &::before {
-      content: "";
-      flex: 0 0 2.2rem;
-      width: 2.2rem;
-      height: 2.2rem;
-      border: 1px solid $lightBlue;
-      background-color: $white;
-      transition: border 0.3s ease;
+    &__txt {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.8rem;
+        cursor: pointer;
 
-      @media (max-width: 48em) {
-        flex: 0 0 4.4rem;
-        width: 4.4rem;
-        height: 4.4rem;
-      }
+        @media (max-width: 48em) {
+            column-gap: 1.6rem;
+        }
+
+        &::before {
+            content: '';
+            flex: 0 0 2.2rem;
+            width: 2.2rem;
+            height: 2.2rem;
+            border: 1px solid $lightBlue;
+            background-color: $white;
+            transition: border 0.3s ease;
+
+            @media (max-width: 48em) {
+                flex: 0 0 4.4rem;
+                width: 4.4rem;
+                height: 4.4rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0.3rem;
+            left: 0.3rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-color: $blue;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+
+            @media (max-width: 48em) {
+                left: 0.6rem;
+                top: 0.6rem;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0.3rem;
-      left: 0.3rem;
-      width: 1.6rem;
-      height: 1.6rem;
-      background-color: $blue;
-      transform: scale(0);
-      transition: transform 0.3s ease;
-
-      @media (max-width: 48em) {
-        left: 0.6rem;
-        top: 0.6rem;
-        width: 3.2rem;
-        height: 3.2rem;
-      }
-    }
-  }
 }

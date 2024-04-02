@@ -125,8 +125,8 @@
     }
 
     &::before {
-        width: 3.8rem;
-        height: 3.8rem;
+        width: calc(100% - 0.2rem);
+        height: calc(100% - 0.2rem);
         opacity: 0.4;
 
         @media (max-width: 48em) {
@@ -136,8 +136,8 @@
     }
 
     &::after {
-        width: 3.4rem;
-        height: 3.4rem;
+        width: calc(100% - 0.6rem);
+        height: calc(100% - 0.6rem);
 
         @media (max-width: 48em) {
             width: 8rem;

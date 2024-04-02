@@ -57,4 +57,26 @@ window.addEventListener('load', function () {
             }
         });
     }
+
+    if (document.querySelector('.documentation__swiper')) {
+        new Swiper('.documentation__swiper', {
+            modules: [Navigation, Autoplay],
+            speed: 800,
+            loop: true,
+            spaceBetween: remToPx(1.6),
+            autoplay: {
+                delay: AUTOPLAY_DELAY,
+                disableOnInteraction: false
+            },
+            navigation: {
+                prevEl: '.documentation__head .i-btn_prev',
+                nextEl: '.documentation__head .i-btn_next'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
 });

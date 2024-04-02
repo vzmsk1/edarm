@@ -1,0 +1,88 @@
+.question-form {
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 48em) {
+            flex-direction: column-reverse;
+            align-items: stretch;
+            row-gap: 4rem;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            flex: 1 1 auto;
+        }
+    }
+    &__heading {
+        margin-bottom: 6.8rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4rem;
+        }
+    }
+    &__fields {
+        margin-bottom: 4.8rem;
+        display: grid;
+        row-gap: 4.2rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 5.2rem;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1.6rem;
+            row-gap: 3.2rem;
+        }
+    }
+
+    &__input {
+        &.input_textarea {
+            textarea {
+                padding-bottom: 1.6rem;
+                height: 5.2rem;
+            }
+        }
+        @media (min-width: 48em) {
+            &.input_textarea {
+                grid-column: span 2;
+
+                textarea {
+                    padding-bottom: 1.6rem;
+                    height: 4.1rem;
+                }
+            }
+        }
+    }
+
+    &__submit {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column-reverse;
+            align-items: stretch;
+            gap: 2.4rem;
+        }
+    }
+
+    &__text {
+        color: #4d5f6e;
+        @media (min-width: 48em) {
+            max-width: 40.6rem;
+        }
+    }
+
+    &__bg {
+        width: 100%;
+
+        @media (min-width: 48em) {
+            flex: 0 0 97rem;
+            width: 97rem;
+        }
+    }
+}

@@ -13,7 +13,7 @@ utils.setCurrentYear();
 // ------------------------------- components -------------------------------
 
 // forms
-// import './utils/forms';
+import './utils/forms';
 
 // tabs
 import './utils/tabs.js';
@@ -29,7 +29,14 @@ import './utils/modals.js';
 
 // ---------------------------------- libs ----------------------------------
 
+// swiper
 import './libs/swiper';
+
+// input mask
+import './libs/inputmask';
+
+// yandex maps
+import './libs/maps.js';
 
 // --------------------------------------------------------------------------
 

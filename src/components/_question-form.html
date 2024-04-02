@@ -1,0 +1,48 @@
+<section class="question-form">
+    <div class="question-form__container container">
+        <div class="question-form__content">
+            <span class="question-form__heading h h_h2">Остались вопросы?</span>
+            <form action="#" data-dev class="question-form__form">
+                <div class="question-form__fields">
+                    <div data-hint="Заполните поле" class="question-form__input input">
+                        <input
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            placeholder="Ваше имя"
+                            class="input__field"
+                        />
+                    </div>
+                    <div data-hint="Заполните поле" class="question-form__input input">
+                        <input
+                            data-tel-mask
+                            data-validate
+                            data-required
+                            autocomplete="off"
+                            type="tel"
+                            name="form[]"
+                            placeholder="Номер телефона"
+                            class="input__field"
+                        />
+                    </div>
+                    <div class="question-form__input input input_textarea">
+                        <textarea placeholder="Сообщение" class="input__field"></textarea>
+                    </div>
+                </div>
+                <div class="question-form__submit">
+                    <button type="submit" class="question-form__btn btn btn_primary btn_primary_fw">
+                        <span class="btn__txt txt22 txt22_sb">Отправить</span>
+                    </button>
+                    <p class="question-form__text">
+                        Нажимая «Отправить» вы подтверждаете, что согласны на обработку персональных данных
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="question-form__bg">
+            <img class="question-form__bg-img" src="./assets/images/bg-figures/factory.svg" alt="" />
+        </div>
+    </div>
+</section>
