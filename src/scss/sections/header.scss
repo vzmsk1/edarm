@@ -1,10 +1,15 @@
 .header {
-    position: absolute;
+    position: relative;
     z-index: 500;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 11.8rem;
+    flex: 0 0 11.8rem;
+
+    .homepage & {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 
     @media (max-width: 48em) {
         height: 15.4rem;
@@ -24,8 +29,24 @@
     }
 
     &__hamburger-btn {
-        @media (min-width: 48em) {
+        &.i-btn {
             display: none;
+        }
+        @media (max-width: 48em) {
+            &.i-btn {
+                display: inline-flex;
+            }
+            &:not(.homepage &) {
+                &.i-btn {
+                    &::before,
+                    &::after {
+                        border: 1px solid $blue;
+                    }
+                    svg path {
+                        stroke: $blue;
+                    }
+                }
+            }
         }
     }
 }
@@ -35,7 +56,11 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid #001b3066;
+
+    .homepage & {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
 
     &__logo {
         flex: 0 0 12.2rem;
@@ -50,6 +75,10 @@
         display: flex;
         column-gap: 5.5rem;
         color: $white;
+
+        &:not(.homepage &, .footer &) {
+            color: $fontColor;
+        }
     }
 
     &__btn {

@@ -41,6 +41,14 @@ body {
 main {
     position: relative;
     flex: 1 1 auto;
+
+    &:not(.homepage &) {
+        padding-top: 6rem;
+
+        @media (max-width: 48em) {
+            padding-top: 6.4rem;
+        }
+    }
 }
 
 // wrapper
@@ -80,4 +88,3 @@ main {
 
 @import './dev/vzmsk1.scss';
 @import './dev/markusDM.scss';
-@import './dev/ukik0.scss';

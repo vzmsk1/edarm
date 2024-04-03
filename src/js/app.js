@@ -13,7 +13,7 @@ utils.setCurrentYear();
 // ------------------------------- components -------------------------------
 
 // forms
-import './utils/forms';
+// import './utils/forms';
 
 // tabs
 import './utils/tabs.js';
@@ -42,4 +42,3 @@ import './libs/maps.js';
 
 import './dev/vzmsk1.js';
 import './dev/markusDM.js';
-import './dev/ukik0.js';

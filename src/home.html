@@ -7,8 +7,39 @@
         <script src="https://api-maps.yandex.ru/v3/?apikey=402f83d9-3e90-4726-b547-87890093893a&lang=ru_RU"></script>
     </head>
     <body>
-        <div class="wrapper home-page">
-            <include src="./components/header.html"></include>
+        <div class="wrapper homepage">
+            <header class="header">
+                <div class="header__container container hf-grid">
+                    <a href="#" class="hf-grid__logo"
+                        ><img class="hf-grid__logo-img" src="./assets/images/logo-white.svg" alt=""
+                    /></a>
+                    <nav class="hf-grid__nav">
+                        <a href="#" class="hf-grid__nav-link">Каталог</a>
+                        <a href="#" class="hf-grid__nav-link">Акции</a>
+                        <a href="#" class="hf-grid__nav-link">Конфигуратор</a>
+                        <a href="#" class="hf-grid__nav-link">Документация</a>
+                        <a href="#" class="hf-grid__nav-link">Сервисный центр</a>
+                        <a href="#" class="hf-grid__nav-link">Контакты</a>
+                    </nav>
+
+                    <button type="button" class="hf-grid__btn btn btn_primary btn_primary_white">
+                        <span class="btn__txt txt22 txt22_sb">Оставить заявку</span>
+                    </button>
+                    <button type="button" class="header__hamburger-btn i-btn">
+                        <svg
+                            width="22"
+                            height="14"
+                            viewBox="0 0 22 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M1 1H21" stroke="white" stroke-linecap="round" />
+                            <path d="M1 7H21" stroke="white" stroke-linecap="round" />
+                            <path d="M1 13H21" stroke="white" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
             <main>
                 <include src="./components/_hero.html"></include>
                 <include src="./components/_documentation.html"></include>
