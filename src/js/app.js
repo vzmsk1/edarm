@@ -19,7 +19,7 @@ utils.setCurrentYear();
 import './utils/tabs.js';
 
 // accordion
-// import "./utils/accordion.js";
+// import './utils/accordion.js';
 
 // select
 // import "./utils/select.js";
@@ -37,6 +37,9 @@ import './libs/inputmask';
 
 // yandex maps
 import './libs/maps.js';
+
+// dynamic dom
+import './libs/dd';
 
 // --------------------------------------------------------------------------
 

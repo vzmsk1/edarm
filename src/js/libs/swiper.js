@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { remToPx } from '../utils/utils';
-import { Navigation, Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination, EffectFade, Thumbs } from 'swiper/modules';
 import { gsap } from 'gsap';
 
 window.addEventListener('load', function () {
@@ -77,6 +77,29 @@ window.addEventListener('load', function () {
                     slidesPerView: 3
                 }
             }
+        });
+    }
+
+    if (document.querySelector('.product__swiper')) {
+        const thumbs = new Swiper('.product__thumbs-swiper', {
+            speed: 800,
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(1.6),
+            loop: true,
+            breakpoints: {
+                768: {
+                    direction: 'vertical'
+                }
+            }
+        });
+        new Swiper('.product__swiper', {
+            modules: [Thumbs],
+            speed: 800,
+            spaceBetween: remToPx(1.6),
+            thumbs: {
+                swiper: thumbs
+            },
+            loop: true
         });
     }
 });
