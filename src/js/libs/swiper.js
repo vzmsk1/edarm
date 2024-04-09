@@ -102,4 +102,29 @@ window.addEventListener('load', function () {
             loop: true
         });
     }
+
+    if (document.querySelector('.collections__swiper')) {
+        new Swiper('.collections__swiper', {
+            modules: [Navigation, Autoplay],
+            speed: 800,
+            rewind: true,
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(1.2),
+
+            autoplay: {
+                delay: AUTOPLAY_DELAY,
+                disableOnInteraction: false
+            },
+            navigation: {
+                prevEl: '.collections__head .i-btn_prev',
+                nextEl: '.collections__head .i-btn_next'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: remToPx(1.6)
+                }
+            }
+        });
+    }
 });

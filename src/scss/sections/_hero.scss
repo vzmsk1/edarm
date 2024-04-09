@@ -1,4 +1,8 @@
 .hero {
+    @media (max-width: 48em) {
+        margin-bottom: 5rem;
+    }
+
     &__container {
         position: relative;
     }

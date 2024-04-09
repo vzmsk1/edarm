@@ -1,0 +1,153 @@
+.about-us {
+    &__container {
+        display: flex;
+        gap: 1.6rem;
+
+        @media (max-width: 48em) {
+            padding-top: 8rem;
+
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__head {
+        margin-bottom: 4rem;
+
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
+
+        @media (max-width: 48em) {
+            column-gap: 3.2rem;
+        }
+    }
+
+    &__group {
+        display: flex;
+    }
+
+    &__image-wrap {
+        flex: 0 0 9rem;
+        width: 9rem;
+        height: 9rem;
+
+        &:first-child {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:last-child {
+            margin-left: -3rem;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        border: 0.2rem solid $white;
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        @media (max-width: 48em) {
+            border: 0.4rem solid $white;
+        }
+    }
+
+    &__heading {
+        color: $blue;
+    }
+
+    &__description {
+        margin-bottom: 4rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 5.2rem;
+
+            max-width: 72.4rem;
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        height: 34.6rem;
+
+        @media (min-width: 48em) {
+            flex: 0 0 87.2rem;
+            width: 87.2rem;
+            height: 100%;
+            min-height: 43.1rem;
+        }
+    }
+
+    &__bg-img {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__numbers {
+        padding-top: 4rem;
+
+        border-top: 1px solid #004780;
+
+        @media (min-width: 48em) {
+            padding-top: 5.2rem;
+        }
+    }
+}
+
+.numbers-about-us {
+    display: flex;
+    column-gap: 10rem;
+
+    @media (max-width: 48em) {
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        color: #004780;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+        }
+    }
+
+    &__number {
+        font-family: 'Bahnschrift';
+        font-weight: 600;
+        font-size: 6rem;
+        line-height: 7.2rem;
+
+        @media (max-width: 48em) {
+            font-size: 5.6rem;
+            line-height: 6.6rem;
+        }
+    }
+
+    &__text {
+        max-width: 9.3rem;
+
+        line-height: 2.4rem;
+
+        @media (max-width: 48em) {
+            max-width: none;
+
+            text-align: center;
+            line-height: 3.2rem;
+        }
+    }
+}

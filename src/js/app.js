@@ -29,6 +29,9 @@ import './utils/modals.js';
 
 // ---------------------------------- libs ----------------------------------
 
+// videojs
+import './libs/video';
+
 // swiper
 import './libs/swiper';
 

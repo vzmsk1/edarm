@@ -176,7 +176,7 @@
         }
     }
 
-    &:not(&_vertical) {
+    &:not(&_vertical, .collections &) {
         @media (max-width: 48em) {
             &:last-child {
                 .catalog-item-card__image-wrap {

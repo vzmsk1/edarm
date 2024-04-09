@@ -1,0 +1,93 @@
+.video {
+    position: relative;
+
+    margin-bottom: 42rem;
+
+    background-color: $blue;
+
+    @media (min-width: 48em) {
+        &::before {
+            content: '';
+
+            position: absolute;
+            left: -42rem;
+            bottom: -27rem;
+
+            width: 89.7rem;
+            height: 89.7rem;
+            background: url('./assets/images/bg-figures/el-2.svg') center / contain no-repeat;
+
+            transform: rotate(-130deg);
+        }
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: -37rem;
+            right: -31rem;
+
+            width: 71.7rem;
+            height: 71.7rem;
+            background: url('./assets/images/bg-figures/el-2.svg') center / contain no-repeat;
+
+            transform: rotate(40deg);
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__content {
+        padding-bottom: 55rem;
+        padding-top: 8rem;
+
+        display: flex;
+        justify-content: space-between;
+
+        color: $white;
+
+        @media (max-width: 48em) {
+            padding-top: 3.2rem;
+            padding-bottom: 20rem;
+
+            flex-direction: column;
+            justify-content: stretch;
+            row-gap: 3.2rem;
+        }
+    }
+
+    &__video-js {
+        position: absolute;
+        z-index: 3;
+        bottom: -24rem;
+        left: 0;
+
+        @media (max-width: 48em) {
+            bottom: 0;
+            left: 2rem;
+
+            transform: translate(0, 50%);
+        }
+    }
+
+    &__heading {
+        @media (min-width: 48em) {
+            max-width: 72.9rem;
+        }
+    }
+
+    &__text {
+        max-width: 59.1rem;
+
+        @media (max-width: 48em) {
+            max-width: none;
+
+            &.txt24 {
+                font-size: 2.8rem;
+                line-height: 4rem;
+            }
+        }
+    }
+}

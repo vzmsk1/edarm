@@ -50,6 +50,7 @@
     "inputmask": "^5.0.8",
     "jsdom": "^22.1.0",
     "simplebar": "^6.2.5",
-    "swiper": "^11.1.0"
+    "swiper": "^11.1.0",
+    "video.js": "^8.10.0"
   }
 }
