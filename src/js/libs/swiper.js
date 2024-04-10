@@ -5,6 +5,7 @@ import { Navigation, Autoplay, Pagination, EffectFade, Thumbs } from 'swiper/mod
 import { gsap } from 'gsap';
 
 window.addEventListener('load', function () {
+    const mm = window.matchMedia('(max-width:768px)');
     const AUTOPLAY_DELAY = 4000;
     const tl = gsap.timeline();
 
@@ -127,4 +128,37 @@ window.addEventListener('load', function () {
             }
         });
     }
+
+    function initSlidersOnResize() {
+        if (document.querySelector('.services__swiper') && mm.matches) {
+            let servicesSwiper = null;
+
+            new Swiper('.services__swiper', {
+                modules: [Navigation, Autoplay],
+                speed: 800,
+                rewind: true,
+                spaceBetween: remToPx(1.2),
+
+                autoplay: {
+                    delay: AUTOPLAY_DELAY,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: '.services__head .i-btn_prev',
+                    nextEl: '.services__head .i-btn_next'
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                        enabled: false
+                    }
+                }
+            });
+        }
+    }
+    initSlidersOnResize();
+
+    mm.addEventListener('change', function () {
+        initSlidersOnResize();
+    });
 });

@@ -22,17 +22,16 @@ export const getHash = () => {
  */
 export const menuInit = () => {
     if (document.querySelector('.hamburger')) {
-        document.addEventListener('click', function (e) {
-            if (bodyLockStatus && e.target.closest('.hamburger')) {
-                menuOpen();
-            } else if (
-                bodyLockStatus &&
-                document.documentElement.classList.contains('_menu-opened') &&
-                (e.target.closest('.menu__close-btn') || !e.target.closest('.menu'))
-            ) {
+        document.querySelector('.hamburger').addEventListener('click', function (e) {
+            if (document.documentElement.classList.contains('_menu-opened')) {
                 menuClose();
+            } else {
+                menuOpen();
             }
         });
+    }
+    if (document.querySelector('.header__close-btn')) {
+        document.querySelector('.header__close-btn').addEventListener('click', menuClose);
     }
 };
 /**

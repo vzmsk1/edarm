@@ -93,6 +93,14 @@
                 background-color: $blue;
             }
         }
+
+        &_black {
+            color: $fontColor;
+
+            &::after {
+                background-color: $fontColor;
+            }
+        }
     }
 }
 
