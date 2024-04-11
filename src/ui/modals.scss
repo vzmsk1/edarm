@@ -41,6 +41,21 @@ body::after {
         padding: 0;
     }
 
+    &_request-send {
+        .modal {
+            &__text {
+                margin-bottom: 4rem;
+            }
+            &__btn {
+                align-self: flex-start;
+
+                @media (max-width: 48em) {
+                    width: 33.6rem;
+                }
+            }
+        }
+    }
+
     &.modal_show {
         z-index: 601;
 
@@ -130,7 +145,8 @@ body::after {
 
         overflow: hidden;
 
-        .modal_request & {
+        .modal_request &,
+        .modal_request-send & {
             &::before,
             &::after {
                 content: '';
@@ -178,11 +194,30 @@ body::after {
             }
         }
 
+        @media (min-width: 48em) {
+            .modal_request-send & {
+                &::before {
+                    top: -23rem;
+                    left: -17rem;
+                }
+                &::after {
+                    bottom: -42rem;
+                    right: -26rem;
+                }
+            }
+        }
+
         @media (max-width: 48em) {
             padding: 3.2rem 2.4rem;
 
             .modal_product-selection & {
                 padding: 12.8rem 2.4rem 4.8rem 2.4rem;
+            }
+
+            .modal_request-send & {
+                &::after {
+                    bottom: -46rem;
+                }
             }
         }
     }
