@@ -1,0 +1,65 @@
+.not-found {
+    @media (max-width: 48em) {
+        padding-top: 5rem;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 12.7rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column-reverse;
+            align-items: stretch;
+            gap: 2rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__heading {
+        font-family: 'Bahnschrift';
+        font-weight: 600;
+        font-size: 25rem;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $blue;
+
+        @media (max-width: 48em) {
+            font-size: 30rem;
+            line-height: 36rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 4rem;
+
+        max-width: 61.6rem;
+
+        @media (max-width: 48em) {
+            max-width: 55.8rem;
+
+            font-size: 3.2rem;
+            line-height: 4.2rem;
+        }
+    }
+
+    &__btn {
+        align-self: flex-start;
+    }
+
+    &__bg {
+        @media (min-width: 48em) {
+            flex: 0 0 109.7rem;
+
+            width: 109.7rem;
+        }
+    }
+}

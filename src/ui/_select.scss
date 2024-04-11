@@ -93,8 +93,10 @@
     &__content {
         margin-right: auto;
         // hide / show selected value
-        &:not(._is-filled &) {
-            display: none;
+        ._has-label & {
+            &:not(._is-filled &) {
+                display: none;
+            }
         }
     }
 

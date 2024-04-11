@@ -208,10 +208,13 @@
                                 <span class="characteristics-item-product__text">8101, 8102, 8103</span>
                             </li>
                             <li class="product__characteristics-item characteristics-item-product">
-                                <span class="characteristics-item-product__heading txt22 txt22_sb"
-                                    >Диапазон моментов</span
-                                >
-                                <span class="characteristics-item-product__range">от 70 до 600 нм</span>
+                                <div class="product__dropdown dropdown">
+                                    <select data-show-selection>
+                                        <option value="1" selected>от 70 до 600 нм</option>
+                                        <option value="2">от 70 до 600 нм</option>
+                                        <option value="3">от 70 до 600 нм</option>
+                                    </select>
+                                </div>
                             </li>
                             <li class="product__characteristics-item characteristics-item-product">
                                 <span class="characteristics-item-product__heading txt22 txt22_sb"
@@ -222,7 +225,11 @@
                         </ul>
                         <div class="product__footer">
                             <span class="product__footer-text h h_h3">цена по запросу</span>
-                            <button type="button" class="product__btn btn btn_primary btn_primary_fw">
+                            <button
+                                data-modal="#requestModal"
+                                type="button"
+                                class="product__btn btn btn_primary btn_primary_fw"
+                            >
                                 <span class="btn__txt txt22 txt22_sb">Оставить заявку</span>
                             </button>
                         </div>
@@ -251,28 +258,31 @@
                             </svg>
                         </button>
                         <div class="accordion-product__content">
-                            <p class="accordion-product__text">
-                                Компактные неполнооборотные электроприводы общепромышленного исполнения ГЗ-ОФ
-                                (М) изготавливается по техническим условиям ГРЛЕ.421321.001ТУ. Электроприводы
-                                соответствуют требованиям технических регламентов ТР ТС 004/2011 «О
-                                безопасности низковольтного оборудования» и ТР ТС 020/2011 «Электромагнитная
-                                совместимость технических средств» размеров.
-                            </p>
-                            <p class="accordion-product__text">
-                                Электроприводы применяются для управления четвертьоборотной трубопроводной
-                                арматуры малых и средних размеров. Приводы обеспечивают надежное перемещение и
-                                удержание в заданном положении запорного элемента ТПА с крутящим моментом от
-                                70 до 600 Нм. Электроприводы ГЗ-ОФ(М) характеризуются компактной конструкцией
-                                и невысокими весогабаритными показателями, благодаря упрощенному механизму
-                                редуктора и алюминиевому корпусу. Ряд уникальных конструктивных решений делают
-                                эти электроприводы удобными в управлении и эксплуатации.
-                            </p>
-                            <p class="accordion-product__text">
-                                Неполнооборотные общепромышленные электроприводы ГЗ-ОФ (М) находят применение
-                                в различных отраслях коммунального хозяйства, водоснабжения, химической,
-                                нефтехимической отрасли, нефтегазового комплекса. Вся продукция
-                                сертифицирована.
-                            </p>
+                            <div class="accordion-product__description">
+                                <p class="accordion-product__text">
+                                    Компактные неполнооборотные электроприводы общепромышленного исполнения
+                                    ГЗ-ОФ (М) изготавливается по техническим условиям ГРЛЕ.421321.001ТУ.
+                                    Электроприводы соответствуют требованиям технических регламентов ТР ТС
+                                    004/2011 «О безопасности низковольтного оборудования» и ТР ТС 020/2011
+                                    «Электромагнитная совместимость технических средств» размеров.
+                                </p>
+                                <p class="accordion-product__text">
+                                    Электроприводы применяются для управления четвертьоборотной трубопроводной
+                                    арматуры малых и средних размеров. Приводы обеспечивают надежное
+                                    перемещение и удержание в заданном положении запорного элемента ТПА с
+                                    крутящим моментом от 70 до 600 Нм. Электроприводы ГЗ-ОФ(М) характеризуются
+                                    компактной конструкцией и невысокими весогабаритными показателями,
+                                    благодаря упрощенному механизму редуктора и алюминиевому корпусу. Ряд
+                                    уникальных конструктивных решений делают эти электроприводы удобными в
+                                    управлении и эксплуатации.
+                                </p>
+                                <p class="accordion-product__text">
+                                    Неполнооборотные общепромышленные электроприводы ГЗ-ОФ (М) находят
+                                    применение в различных отраслях коммунального хозяйства, водоснабжения,
+                                    химической, нефтехимической отрасли, нефтегазового комплекса. Вся
+                                    продукция сертифицирована.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-product__item">
@@ -293,22 +303,161 @@
                             </svg>
                         </button>
                         <div class="accordion-product__content">
-                            <p class="accordion-product__text">
-                                Компактные неполнооборотные электроприводы общепромышленного исполнения ГЗ-ОФ
-                                (М) изготавливается по техническим условиям ГРЛЕ.421321.001ТУ. Электроприводы
-                                соответствуют требованиям технических регламентов ТР ТС 004/2011 «О
-                                безопасности низковольтного оборудования» и ТР ТС 020/2011 «Электромагнитная
-                                совместимость технических средств» размеров.
-                            </p>
-                            <p class="accordion-product__text">
-                                Электроприводы применяются для управления четвертьоборотной трубопроводной
-                                арматуры малых и средних размеров. Приводы обеспечивают надежное перемещение и
-                                удержание в заданном положении запорного элемента ТПА с крутящим моментом от
-                                70 до 600 Нм. Электроприводы ГЗ-ОФ(М) характеризуются компактной конструкцией
-                                и невысокими весогабаритными показателями, благодаря упрощенному механизму
-                                редуктора и алюминиевому корпусу. Ряд уникальных конструктивных решений делают
-                                эти электроприводы удобными в управлении и эксплуатации.
-                            </p>
+                            <div class="accordion-product__cards">
+                                <a href="#" class="documentation__card documentation-card">
+                                    <span class="documentation-card__icon">
+                                        <svg
+                                            width="80"
+                                            height="80"
+                                            viewBox="0 0 80 80"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <circle
+                                                cx="31"
+                                                cy="31"
+                                                r="29.25"
+                                                stroke="white"
+                                                stroke-width="1.5"
+                                            />
+                                            <rect
+                                                x="31.75"
+                                                y="31.75"
+                                                width="46.5"
+                                                height="46.5"
+                                                stroke="white"
+                                                stroke-width="1.5"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="documentation-card__text">
+                                        <span class="documentation-card__heading h h_h3"
+                                            >Cертификаты соответствия продукции</span
+                                        >
+                                        <button
+                                            type="button"
+                                            class="documentation-card__btn btn btn_secondary"
+                                        >
+                                            <span class="btn__txt">Подробнее</span>
+                                        </button>
+                                    </span>
+                                </a>
+                                <a href="#" class="documentation__card documentation-card">
+                                    <span class="documentation-card__icon">
+                                        <svg
+                                            width="80"
+                                            height="80"
+                                            viewBox="0 0 80 80"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <circle
+                                                cx="28.5714"
+                                                cy="28.5714"
+                                                r="27.8214"
+                                                stroke="#001B30"
+                                                stroke-width="1.5"
+                                            />
+                                            <circle
+                                                cx="51.4286"
+                                                cy="51.4286"
+                                                r="27.8214"
+                                                stroke="#001B30"
+                                                stroke-width="1.5"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="documentation-card__text">
+                                        <span class="documentation-card__heading h h_h3"
+                                            >Cертификаты соответствия продукции</span
+                                        >
+                                        <button
+                                            type="button"
+                                            class="documentation-card__btn btn btn_secondary"
+                                        >
+                                            <span class="btn__txt">Подробнее</span>
+                                        </button>
+                                    </span>
+                                </a>
+                                <a href="#" class="documentation__card documentation-card">
+                                    <span class="documentation-card__icon">
+                                        <svg
+                                            width="80"
+                                            height="80"
+                                            viewBox="0 0 80 80"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="28.75"
+                                                y="28.75"
+                                                width="46.5"
+                                                height="46.5"
+                                                stroke="#001B30"
+                                                stroke-width="1.5"
+                                            />
+                                            <rect
+                                                x="4.75"
+                                                y="4.75"
+                                                width="46.5"
+                                                height="46.5"
+                                                stroke="#001B30"
+                                                stroke-width="1.5"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="documentation-card__text">
+                                        <span class="documentation-card__heading h h_h3"
+                                            >Cертификаты соответствия продукции</span
+                                        >
+                                        <button
+                                            type="button"
+                                            class="documentation-card__btn btn btn_secondary"
+                                        >
+                                            <span class="btn__txt">Подробнее</span>
+                                        </button>
+                                    </span>
+                                </a>
+                                <a href="#" class="documentation__card documentation-card">
+                                    <span class="documentation-card__icon">
+                                        <svg
+                                            width="80"
+                                            height="80"
+                                            viewBox="0 0 80 80"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="28.75"
+                                                y="28.75"
+                                                width="46.5"
+                                                height="46.5"
+                                                stroke="#001B30"
+                                                stroke-width="1.5"
+                                            />
+                                            <rect
+                                                x="4.75"
+                                                y="4.75"
+                                                width="46.5"
+                                                height="46.5"
+                                                stroke="#001B30"
+                                                stroke-width="1.5"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="documentation-card__text">
+                                        <span class="documentation-card__heading h h_h3"
+                                            >Cертификаты соответствия продукции</span
+                                        >
+                                        <button
+                                            type="button"
+                                            class="documentation-card__btn btn btn_secondary"
+                                        >
+                                            <span class="btn__txt">Подробнее</span>
+                                        </button>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -21,13 +21,49 @@ textarea {
     position: relative;
 
     &_file {
+        margin-right: auto;
+
+        display: inline-flex;
+        align-items: center;
+        column-gap: 2.4rem;
+
+        &._is-filled {
+            &::after {
+                content: attr(data-size);
+            }
+            .input__placeholder {
+                &::after {
+                    content: none;
+                }
+            }
+            .input__remove-btn {
+                display: inline-block;
+            }
+        }
+
         .input {
+            &__remove-btn {
+                display: none;
+
+                order: 1;
+
+                svg {
+                    width: 2.4rem;
+                    height: 2.4rem;
+
+                    @media (max-width: 48em) {
+                        width: 4.8rem;
+                        height: 4.8rem;
+                    }
+                }
+            }
+
             &__field {
                 position: absolute;
                 z-index: 2;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 94%;
                 height: 100%;
                 opacity: 0;
             }

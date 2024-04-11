@@ -348,23 +348,23 @@
             </div>
             <div class="configurator__content">
                 <span class="configurator__subtitle">Тип и модель электропривода</span>
-                <div class="configurator__options">
-                    <div class="configurator__option option-configurator">
-                        <input type="radio" name="configuratorOption" value="" checked="" class="option-configurator__input">
-                        <div class="option-configurator__content">
-                            <div class="option-configurator__image-wrap">
-                                <img src="./assets/images/items/CHervyachniy-reduktor-GS.webp" alt="" class="option-configurator__image">
+                <div class="configurator__types">
+                    <div class="configurator__type type-configurator">
+                        <input type="radio" name="configuratorType" value="" checked="" class="type-configurator__input">
+                        <div class="type-configurator__content">
+                            <div class="type-configurator__image-wrap">
+                                <img src="./assets/images/items/CHervyachniy-reduktor-GS.webp" alt="" class="type-configurator__image">
                             </div>
-                            <span class="option-configurator__heading">Задвижка</span>
+                            <span class="type-configurator__heading">Задвижка</span>
                         </div>
                     </div>
-                    <div class="configurator__option option-configurator">
-                        <input type="radio" name="configuratorOption" value="" class="option-configurator__input">
-                        <div class="option-configurator__content">
-                            <div class="option-configurator__image-wrap">
-                                <img src="./assets/images/items/04.webp" alt="" class="option-configurator__image">
+                    <div class="configurator__type type-configurator">
+                        <input type="radio" name="configuratorType" value="" class="type-configurator__input">
+                        <div class="type-configurator__content">
+                            <div class="type-configurator__image-wrap">
+                                <img src="./assets/images/items/04.webp" alt="" class="type-configurator__image">
                             </div>
-                            <span class="option-configurator__heading">Затвор</span>
+                            <span class="type-configurator__heading">Затвор</span>
                         </div>
                     </div>
                 </div>
@@ -384,7 +384,7 @@
                         </select>
                     </div>
                 </div>
-                <button type="button" class="configurator__btn btn btn_primary">
+                <button type="button" class="configurator__btn btn btn_primary btn_primary_fw">
                     <span class="btn__txt txt22 txt22_sb">Продолжить</span>
                 </button>
             </div>
@@ -522,7 +522,7 @@
             требованиям и обеспечит эффективное функционирование трубопроводной арматуры.
         </p>
         <div class="banner__group">
-            <button type="button" class="banner__btn btn btn_primary btn_primary_white">
+            <button type="button" class="banner__btn btn btn_primary btn_primary_white btn_primary_fw">
                 <span class="btn__txt txt22 txt22_sb">Связаться со специалистом</span>
             </button>
             <a href="tel:71234567890" class="banner__link h h_h3">+7 (123) 456 78 90</a>
@@ -587,7 +587,7 @@
                     <span class="li-item-service-center__text">Комплексный подход к обслуживанию</span>
                 </li>
             </ul>
-            <a href="#" class="service-center__btn btn btn_primary">
+            <a href="#" class="service-center__btn btn btn_primary btn_primary_fw">
                 <span class="btn__txt txt22 txt22_sb">Узнать подробнее</span>
             </a>
         </div>
@@ -805,6 +805,64 @@
         </div>
     </div>
 </footer>
+
+            <div id="requestModal" aria-hidden="true" class="modal">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <img src="./assets/images/icons/cross.svg" alt="" class="modal__close-icon">
+                </button>
+                <div class="modal__inner">
+                    <span class="modal__heading h h_h1">Оставить заявку</span>
+                    <form action="#" data-dev="" class="modal__form form-modal">
+                        <div class="form-modal__fields">
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Имя*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Фамилия*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Название компании*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="ИНН*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="email" name="form[]" placeholder="Электронная почта*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-tel-mask="" autocomplete="off" type="tel" name="form[]" placeholder="Номер телефона" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input input_textarea">
+                                <textarea name="form[]" placeholder="Дополнительная информация по заказу" class="input__field"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-modal__input input input_file">
+                            <input data-ignore-validation="" type="file" name="form[]" class="input__field">
+                            <span class="input__placeholder txt22 txt22_sb">Прикрепить файл</span>
+                            <button type="button" class="input__remove-btn">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.46967 16.9697C6.17678 17.2626 6.17678 17.7374 6.46967 18.0303C6.76256 18.3232 7.23744 18.3232 7.53033 18.0303L6.46967 16.9697ZM12.5303 13.0303C12.8232 12.7374 12.8232 12.2626 12.5303 11.9697C12.2374 11.6768 11.7626 11.6768 11.4697 11.9697L12.5303 13.0303ZM11.4697 11.9697C11.1768 12.2626 11.1768 12.7374 11.4697 13.0303C11.7626 13.3232 12.2374 13.3232 12.5303 13.0303L11.4697 11.9697ZM17.5303 8.03033C17.8232 7.73744 17.8232 7.26256 17.5303 6.96967C17.2374 6.67678 16.7626 6.67678 16.4697 6.96967L17.5303 8.03033ZM12.5303 11.9697C12.2374 11.6768 11.7626 11.6768 11.4697 11.9697C11.1768 12.2626 11.1768 12.7374 11.4697 13.0303L12.5303 11.9697ZM16.4697 18.0303C16.7626 18.3232 17.2374 18.3232 17.5303 18.0303C17.8232 17.7374 17.8232 17.2626 17.5303 16.9697L16.4697 18.0303ZM11.4697 13.0303C11.7626 13.3232 12.2374 13.3232 12.5303 13.0303C12.8232 12.7374 12.8232 12.2626 12.5303 11.9697L11.4697 13.0303ZM7.53033 6.96967C7.23744 6.67678 6.76256 6.67678 6.46967 6.96967C6.17678 7.26256 6.17678 7.73744 6.46967 8.03033L7.53033 6.96967ZM7.53033 18.0303L12.5303 13.0303L11.4697 11.9697L6.46967 16.9697L7.53033 18.0303ZM12.5303 13.0303L17.5303 8.03033L16.4697 6.96967L11.4697 11.9697L12.5303 13.0303ZM11.4697 13.0303L16.4697 18.0303L17.5303 16.9697L12.5303 11.9697L11.4697 13.0303ZM12.5303 11.9697L7.53033 6.96967L6.46967 8.03033L11.4697 13.0303L12.5303 11.9697Z" fill="#004780"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="form-modal__group">
+                            <button type="submit" class="form-modal__btn btn btn_primary btn_primary_fw">
+                                <span class="btn__txt txt22 txt22_sb">Отправить</span>
+                            </button>
+                            <p class="form-modal__text">
+                                Нажимая «Отправить» вы подтверждаете, что согласны на обработку персональных
+                                данных
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </body>

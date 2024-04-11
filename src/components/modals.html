@@ -1,0 +1,121 @@
+<!-- оставить заявку -->
+<div id="requestModal" aria-hidden="true" class="modal">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close type="button" class="modal__close">
+                    <img src="./assets/images/icons/cross.svg" alt="" class="modal__close-icon" />
+                </button>
+                <div class="modal__inner">
+                    <span class="modal__heading h h_h1">Оставить заявку</span>
+                    <form action="#" data-dev class="modal__form form-modal">
+                        <div class="form-modal__fields">
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Имя*"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Фамилия*"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Название компании*"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="ИНН*"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="email"
+                                    name="form[]"
+                                    placeholder="Электронная почта*"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input
+                                    data-tel-mask
+                                    autocomplete="off"
+                                    type="tel"
+                                    name="form[]"
+                                    placeholder="Номер телефона"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div
+                                data-hint="Поле обязательно к заполению"
+                                class="form-modal__input input input_textarea"
+                            >
+                                <textarea
+                                    name="form[]"
+                                    placeholder="Дополнительная информация по заказу"
+                                    class="input__field"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="form-modal__input input input_file">
+                            <input data-ignore-validation type="file" name="form[]" class="input__field" />
+                            <span class="input__placeholder txt22 txt22_sb">Прикрепить файл</span>
+                            <button type="button" class="input__remove-btn">
+                                <svg
+                                    width="24"
+                                    height="25"
+                                    viewBox="0 0 24 25"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M6.46967 16.9697C6.17678 17.2626 6.17678 17.7374 6.46967 18.0303C6.76256 18.3232 7.23744 18.3232 7.53033 18.0303L6.46967 16.9697ZM12.5303 13.0303C12.8232 12.7374 12.8232 12.2626 12.5303 11.9697C12.2374 11.6768 11.7626 11.6768 11.4697 11.9697L12.5303 13.0303ZM11.4697 11.9697C11.1768 12.2626 11.1768 12.7374 11.4697 13.0303C11.7626 13.3232 12.2374 13.3232 12.5303 13.0303L11.4697 11.9697ZM17.5303 8.03033C17.8232 7.73744 17.8232 7.26256 17.5303 6.96967C17.2374 6.67678 16.7626 6.67678 16.4697 6.96967L17.5303 8.03033ZM12.5303 11.9697C12.2374 11.6768 11.7626 11.6768 11.4697 11.9697C11.1768 12.2626 11.1768 12.7374 11.4697 13.0303L12.5303 11.9697ZM16.4697 18.0303C16.7626 18.3232 17.2374 18.3232 17.5303 18.0303C17.8232 17.7374 17.8232 17.2626 17.5303 16.9697L16.4697 18.0303ZM11.4697 13.0303C11.7626 13.3232 12.2374 13.3232 12.5303 13.0303C12.8232 12.7374 12.8232 12.2626 12.5303 11.9697L11.4697 13.0303ZM7.53033 6.96967C7.23744 6.67678 6.76256 6.67678 6.46967 6.96967C6.17678 7.26256 6.17678 7.73744 6.46967 8.03033L7.53033 6.96967ZM7.53033 18.0303L12.5303 13.0303L11.4697 11.9697L6.46967 16.9697L7.53033 18.0303ZM12.5303 13.0303L17.5303 8.03033L16.4697 6.96967L11.4697 11.9697L12.5303 13.0303ZM11.4697 13.0303L16.4697 18.0303L17.5303 16.9697L12.5303 11.9697L11.4697 13.0303ZM12.5303 11.9697L7.53033 6.96967L6.46967 8.03033L11.4697 13.0303L12.5303 11.9697Z"
+                                        fill="#004780"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="form-modal__group">
+                            <button type="submit" class="form-modal__btn btn btn_primary btn_primary_fw">
+                                <span class="btn__txt txt22 txt22_sb">Отправить</span>
+                            </button>
+                            <p class="form-modal__text">
+                                Нажимая «Отправить» вы подтверждаете, что согласны на обработку персональных
+                                данных
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,6 +6,26 @@
 
     &__head {
     }
+
+    &__breadcrumbs {
+        margin-bottom: 4rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        gap: 4.8rem;
+
+        width: 100%;
+
+        @media (min-width: 48em) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+    }
 }
 
 .documentation-card {
