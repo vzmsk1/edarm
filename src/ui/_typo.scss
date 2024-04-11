@@ -3,6 +3,10 @@
     font-weight: 600;
     line-height: 120%;
 
+    &_blue {
+        color: $blue;
+    }
+
     &_h1 {
         font-size: 7rem;
         text-transform: uppercase;
@@ -40,6 +44,7 @@
 }
 
 .label {
+    font-family: 'Framer Sans';
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 120%;
