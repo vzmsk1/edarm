@@ -28,6 +28,7 @@
 
         .btn__txt {
             line-height: 2.6rem;
+            white-space: nowrap;
 
             @media (max-width: 48em) {
                 line-height: 4.2rem;

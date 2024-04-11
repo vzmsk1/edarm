@@ -1,0 +1,128 @@
+<section class="configurator configurator_hero">
+    <div class="configurator__container container">
+        <nav class="documentation__breadcrumbs breadcrumbs">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__txt">Конфигуратор</span>
+        </nav>
+	    
+        <div class="configurator__head">
+            <span class="configurator__heading h h_h2">Конфигуратор</span>
+        </div>
+        <div class="configurator__body">
+	        <div class='configurator__steps'>
+		        <button type='button' class='configurator__step txt24 _is-active'>1 <span>этап</span></button>
+		        <button type='button' class='configurator__step txt24'>2 <span>этап</span></span>
+	        </div>
+            <div class="configurator__bg">
+                <img
+                    src="./assets/images/bg/technologist-with-grey-tablet-his-hands-make-set-up-production-line-while-standing-department-dairy-factory.webp"
+                    alt=""
+                    class="configurator__bg-image"
+                />
+            </div>
+            <form action='#' data-dev  data-select-single class="configurator__content">
+                <span class="configurator__subtitle-label label">Выберите Тип управляемой арматуры</span>
+                <div class="configurator__types">
+                    <div class="configurator__type type-configurator">
+                        <input
+                            type="radio"
+                            name="configuratorType"
+                            checked
+                            class="type-configurator__input"
+                        />
+                        <div class="type-configurator__content">
+                            <div class="type-configurator__image-wrap">
+                                <img
+                                    src="./assets/images/items/CHervyachniy-reduktor-GS.webp"
+                                    alt=""
+                                    class="type-configurator__image"
+                                />
+                            </div>
+                            <span class="type-configurator__heading">Задвижка</span>
+                        </div>
+                    </div>
+                    <div class="configurator__type type-configurator">
+                        <input
+                            type="radio"
+                            name="configuratorType"
+                            class="type-configurator__input"
+                        />
+                        <div class="type-configurator__content">
+                            <div class="type-configurator__image-wrap">
+                                <img
+                                    src="./assets/images/items/04.webp"
+                                    alt=""
+                                    class="type-configurator__image"
+                                />
+                            </div>
+                            <span class="type-configurator__heading">Затвор</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="configurator__fields">
+	                <div class='configurator__field'>
+		                <span class='configurator__label label'>Выберите Диаметр</span>
+                    <div class="configurator__dropdown dropdown">
+                        <select data-sel-label="Диаметр" data-show-selection>
+                            <option value="1">Выбор</option>
+                            <option value="2">Выбор</option>
+                            <option value="3">Выбор</option>
+                        </select>
+                    </div>
+		                
+	                </div>
+	                <div class='configurator__field'>
+		                <span class='configurator__label label'>Выберите Давление</span>
+                    <div class="configurator__dropdown dropdown">
+                        <select data-sel-label="Давление" data-show-selection>
+                            <option value="1">Выбор</option>
+                            <option value="2">Выбор</option>
+                            <option value="3">Выбор</option>
+                        </select>
+                    </div>
+		                
+	                </div>
+                </div>
+	            <div class='configurator__options options-configurator'>
+		            <div class='options-configurator__group'>
+			            <span class='options-configurator__label label'>Область применения</span>
+			            <ul class='options-configurator__list'>
+				            <li class='options-configurator__item'>
+					               <label class="options-configurator__checkbox checkbox">
+							            <input type="radio" name="oblastPrimenenia" checked class="checkbox__input" />
+							            <span class="checkbox__txt">Общепромышленная</span>
+							          </label>
+				            </li>
+				             <li class='options-configurator__item'>
+					               <label class="options-configurator__checkbox checkbox">
+							            <input type="radio" name="oblastPrimenenia"  class="checkbox__input" />
+							            <span class="checkbox__txt">Взрывозащищенная</span>
+							          </label>
+				            </li>
+			            </ul>
+		            </div>
+		            <div class='options-configurator__group'>
+			            <span class='options-configurator__label label'>блок интеллектуального управления</span>
+			            <ul class='options-configurator__list'>
+				            <li class='options-configurator__item'>
+					               <label class="options-configurator__checkbox checkbox">
+							            <input type="radio" name="hasControlBlock" class="checkbox__input" />
+							            <span class="checkbox__txt">Есть</span>
+							          </label>
+				            </li>
+				             <li class='options-configurator__item'>
+					               <label class="options-configurator__checkbox checkbox">
+							            <input type="radio" name="hasControlBlock" checked class="checkbox__input" />
+							            <span class="checkbox__txt">Нет</span>
+							          </label>
+				            </li>
+			            </ul>
+		            </div>
+	            </div>
+                <button type="submit" class="configurator__btn btn btn_primary btn_primary_fw">
+                    <span class="btn__txt txt22 txt22_m">Далее</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

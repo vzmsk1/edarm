@@ -37,6 +37,10 @@ body::after {
 
     transition: visibility 0.8s ease 0s;
 
+    &_product-selection {
+        padding: 0;
+    }
+
     &.modal_show {
         z-index: 601;
 
@@ -86,6 +90,10 @@ body::after {
 
         @media (min-width: 48em) {
             max-width: 80rem;
+
+            .modal_product-selection & {
+                max-width: 137.5rem;
+            }
         }
     }
 
@@ -122,52 +130,59 @@ body::after {
 
         overflow: hidden;
 
-        &::before,
-        &::after {
-            content: '';
+        .modal_request & {
+            &::before,
+            &::after {
+                content: '';
 
-            position: absolute;
+                position: absolute;
 
-            background: url('./assets/images/bg-figures/el-6.svg') center / contain no-repeat;
-        }
+                background: url('./assets/images/bg-figures/el-6.svg') center / contain no-repeat;
+            }
 
-        &::before {
-            top: -23rem;
-            left: -9rem;
+            &::before {
+                top: -23rem;
+                left: -9rem;
 
-            width: 39rem;
-            height: 39rem;
+                width: 39rem;
+                height: 39rem;
 
-            transform: rotate(150deg);
-        }
+                transform: rotate(150deg);
+            }
 
-        &::after {
-            bottom: -45rem;
-            right: -39rem;
+            &::after {
+                bottom: -45rem;
+                right: -39rem;
 
-            width: 76rem;
-            height: 76rem;
+                width: 76rem;
+                height: 76rem;
 
-            transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            @media (max-width: 48em) {
+                &::before {
+                    top: -24rem;
+                    left: -16rem;
+
+                    width: 38rem;
+                    height: 38rem;
+                }
+
+                &::after {
+                    bottom: -3rem;
+                    right: -29rem;
+
+                    width: 78rem;
+                    height: 78rem;
+                }
+            }
         }
 
         @media (max-width: 48em) {
             padding: 3.2rem 2.4rem;
 
-            &::before {
-                top: -24rem;
-                left: -16rem;
-
-                width: 38rem;
-                height: 38rem;
-            }
-
-            &::after {
-                bottom: -3rem;
-                right: -29rem;
-
-                width: 78rem;
-                height: 78rem;
+            .modal_product-selection & {
+                padding: 12.8rem 2.4rem 4.8rem 2.4rem;
             }
         }
     }

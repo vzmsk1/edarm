@@ -16,12 +16,25 @@
         display: grid;
         width: 100%;
 
+        .modal & {
+            margin-bottom: 0;
+        }
+
         @media (min-width: 48em) {
             margin-bottom: 12rem;
 
             grid-template-columns: 7fr 5fr;
         }
     }
+
+    &__info {
+        @media (max-width: 48em) {
+            .modal & {
+                padding-top: 4.8rem;
+            }
+        }
+    }
+
     &__carousel {
         margin-bottom: 6.4rem;
 
@@ -44,6 +57,12 @@
         display: flex;
         flex-direction: column;
 
+        .modal & {
+            padding: 0;
+
+            border: none;
+        }
+
         @media (min-width: 48em) {
             padding: 5rem;
 
@@ -52,13 +71,18 @@
     }
     &__header {
         margin-bottom: 2.4rem;
+        padding-bottom: 2rem;
+
+        border-bottom: 1px solid #99b5cc;
 
         color: $blue;
 
-        @media (min-width: 48em) {
-            padding-bottom: 2rem;
+        @media (max-width: 48em) {
+            &:not(.modal &) {
+                padding-bottom: 0;
 
-            border-bottom: 1px solid #99b5cc;
+                border-bottom: none;
+            }
         }
     }
     &__text {
@@ -90,12 +114,18 @@
     }
     &__footer {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
 
-        @media (min-width: 48em) {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+        @media (max-width: 48em) {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+
+            .modal & {
+                flex-direction: row;
+                column-gap: 17rem;
+            }
         }
     }
     &__footer-text {
@@ -105,6 +135,12 @@
             margin-bottom: 4.8rem;
 
             font-weight: 600;
+
+            .modal & {
+                margin-bottom: 0;
+
+                white-space: nowrap;
+            }
         }
     }
     &__btn {
@@ -138,6 +174,12 @@
         display: block;
 
         max-width: 59rem;
+
+        @media (max-width: 48em) {
+            .modal & {
+                padding-bottom: 4.8rem;
+            }
+        }
     }
     &__more-info {
         display: grid;
@@ -155,6 +197,16 @@
     &__accordion {
         @media (max-width: 48em) {
             margin-bottom: 6.4rem;
+        }
+    }
+    &__image-wrap {
+        align-self: center;
+
+        flex: 0 0 60.8rem;
+        width: 60.8rem;
+
+        @media (max-width: 48em) {
+            grid-row: 3/4;
         }
     }
 }

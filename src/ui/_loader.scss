@@ -1,0 +1,32 @@
+.loader {
+    --b: 0.4rem;
+
+    padding: 1px;
+
+    display: block;
+    aspect-ratio: 1;
+
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+
+    background: conic-gradient(#0000 10%, #004780ff) content-box;
+    -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+
+    animation: loader 1s infinite steps(10);
+
+    @media (max-width: 48em) {
+        --b: 0.8rem;
+
+        width: 8.8rem;
+        height: 8.8rem;
+    }
+}
+@keyframes loader {
+    to {
+        transform: rotate(1turn);
+    }
+}
