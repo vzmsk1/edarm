@@ -1,51 +1,96 @@
+import { markersCollection } from '../libs/maps';
+import { modules } from '../modules';
 import { _slideDown, _slideToggle, _slideUp, removeClasses } from '../utils/utils';
 
 document.addEventListener('DOMContentLoaded', function () {
     const mm = window.matchMedia('(max-width:768px)');
 
     function initTabsOnResize() {
-        if (document.querySelectorAll('.accordion-product__content').length) {
-            const items = document.querySelectorAll('.accordion-product__content');
-            const containers = document.querySelectorAll('.accordion-product__item');
+        if (document.querySelectorAll('[data-accordion-tabs]').length) {
+            document.querySelectorAll('[data-accordion-tabs]').forEach((block) => {
+                const items = block.querySelectorAll('[data-accordion-tabs-content]');
+                const containers = block.querySelectorAll('[data-accordion-tabs-item]');
+                const body = block.querySelector('[data-accordion-tabs-body]');
 
-            if (!mm.matches) {
-                items[0].classList.add('_is-active');
-            } else {
-                removeClasses(items, '_is-active');
-                removeClasses(containers, '_is-active');
-                _slideDown(items[0]);
-            }
-
-            containers[0].classList.add('_is-active');
-
-            for (let i = 0; i < items.length; i++) {
-                const item = items[i];
-                const container = containers[i];
-
-                if (mm.matches) {
-                    container.append(item);
-                    if (i !== 0) _slideUp(item);
+                if (!mm.matches) {
+                    items[0].classList.add('_is-active');
                 } else {
-                    document.querySelector('.accordion-product__container').append(item);
+                    removeClasses(items, '_is-active');
+                    removeClasses(containers, '_is-active');
+                    _slideDown(items[0]);
                 }
 
-                container.addEventListener('click', function () {
-                    if (!mm.matches) {
-                        removeClasses(items, '_is-active');
-                        removeClasses(containers, '_is-active');
-                        item.classList.add('_is-active');
-                        container.classList.add('_is-active');
-                    } else {
-                        if (container.classList.contains('_is-active')) {
-                            container.classList.remove('_is-active');
-                            _slideUp(item);
-                        } else {
-                            container.classList.add('_is-active');
-                            _slideDown(item);
-                        }
+                containers[0].classList.add('_is-active');
+
+                function setMarkerActiveState(i, markers) {
+                    if (document.querySelector(`.marker[data-index="${i}"]`)) {
+                        const curMarker = document.querySelector(`.marker[data-index="${i}"]`);
+                        removeClasses(markers, '_is-active');
+                        curMarker.classList.add('_is-active');
+
+                        modules.map.setLocation({
+                            center: markersCollection.find((el) => el.idx === +curMarker.dataset.index)
+                                .coordinate,
+                            duration: 300
+                        });
                     }
-                });
-            }
+                }
+
+                for (let i = 0; i < items.length; i++) {
+                    const item = items[i];
+                    const container = containers[i];
+
+                    if (mm.matches) {
+                        container.append(item);
+                        if (i !== 0) _slideUp(item);
+                    } else if (body) {
+                        body.append(item);
+                    }
+
+                    container.addEventListener('click', function () {
+                        const markers = Array.from(document.querySelectorAll('.marker'));
+
+                        if (
+                            mm.matches ||
+                            (!block.hasAttribute('data-accordion-tabs-mm') &&
+                                block.dataset.accordionTabs === 'map')
+                        ) {
+                            container.classList.toggle('_is-active');
+                            item.classList.toggle('_is-active');
+
+                            const activeItems = Array.from(
+                                block.querySelectorAll('[data-accordion-tabs-item]._is-active')
+                            );
+
+                            if (activeItems.length > 1) {
+                                activeItems.forEach((el) => {
+                                    if (el !== container) {
+                                        _slideUp(el.querySelector('[data-accordion-tabs-content]'));
+                                        el.classList.remove('_is-active');
+                                    }
+                                });
+                            } else if (!activeItems.length && markers.length) {
+                                removeClasses(markers, '_is-active');
+                            }
+
+                            _slideToggle(item);
+
+                            if (activeItems.length) {
+                                setMarkerActiveState(i, markers);
+                            }
+                        } else {
+                            removeClasses(items, '_is-active');
+                            removeClasses(containers, '_is-active');
+                            item.classList.add('_is-active');
+                            container.classList.add('_is-active');
+
+                            if (block.dataset.accordionTabs === 'map') {
+                                setMarkerActiveState(i, markers);
+                            }
+                        }
+                    });
+                }
+            });
         }
     }
     initTabsOnResize();

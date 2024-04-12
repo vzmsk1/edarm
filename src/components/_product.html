@@ -1,4 +1,4 @@
-<section data-modal="#productSelectionModal" class="product">
+<section class="product">
     <div class="product__container container">
         <nav class="product__breadcrumbs breadcrumbs">
             <a href="#" class="breadcrumbs__link">Главная</a>
@@ -241,12 +241,12 @@
             </div>
         </div>
         <div class="product__more-info">
-            <div class="product__accordion accordion-product">
+            <div data-accordion-tabs class="product__accordion accordion-product">
                 <div class="accordion-product__items">
-                    <div class="accordion-product__item">
-                        <button type="button" class="accordion-product__btn h h_h4">
-                            <span class="accordion-product__number">01</span
-                            ><span class="accordion-product__heading">Описание</span>
+                    <div data-accordion-tabs-item class="accordion-product__item">
+                        <button type="button" class="accordion-product__btn h h_h4 place-title">
+                            <span class="place-title__number">01</span
+                            ><span class="place-title__heading">Описание</span>
                             <svg
                                 width="24"
                                 height="25"
@@ -260,7 +260,7 @@
                                 />
                             </svg>
                         </button>
-                        <div class="accordion-product__content">
+                        <div data-accordion-tabs-content class="accordion-product__content">
                             <div class="accordion-product__description">
                                 <p class="accordion-product__text">
                                     Компактные неполнооборотные электроприводы общепромышленного исполнения
@@ -288,10 +288,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-product__item">
-                        <button type="button" class="accordion-product__btn h h_h4">
-                            <span class="accordion-product__number">02</span
-                            ><span class="accordion-product__heading">Материалы для скачивания</span>
+                    <div data-accordion-tabs-item class="accordion-product__item">
+                        <button type="button" class="accordion-product__btn h h_h4 place-title">
+                            <span class="place-title__number">02</span
+                            ><span class="place-title__heading">Материалы для скачивания</span>
                             <svg
                                 width="24"
                                 height="25"
@@ -305,7 +305,7 @@
                                 />
                             </svg>
                         </button>
-                        <div class="accordion-product__content">
+                        <div data-accordion-tabs-content class="accordion-product__content">
                             <div class="accordion-product__cards">
                                 <a href="#" class="documentation__card documentation-card">
                                     <span class="documentation-card__icon">
@@ -464,7 +464,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-product__container"></div>
+                <div data-accordion-tabs-body class="accordion-product__container"></div>
             </div>
             <div class="product__banner product-banner">
                 <span class="product-banner__heading h h_h3"
