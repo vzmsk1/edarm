@@ -138,6 +138,17 @@ body::after {
         }
     }
 
+    &__subtitle {
+        margin-bottom: 5.2rem;
+
+        font-family: 'Framer Sans';
+        font-weight: 600;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4.8rem;
+        }
+    }
+
     &__body {
         position: relative;
 

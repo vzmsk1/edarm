@@ -90,6 +90,9 @@
 
 .card-stock {
     position: relative;
+
+    overflow: hidden;
+
     &:hover {
         .card-stock {
             &__inner {

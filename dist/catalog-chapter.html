@@ -512,6 +512,60 @@
     </div>
 </div>
 
+<!-- оставить заявку (сервисный центр) -->
+<div id="requestServiceCenterModal" aria-hidden="true" class="modal modal_request">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <img src="./assets/images/icons/cross.svg" alt="" class="modal__close-icon">
+                </button>
+                <div class="modal__inner">
+                    <span class="modal__heading h h_h1">Оставить заявку</span>
+                    <span class="modal__subtitle txt24">Монтаж и эксплуатация</span>
+                    <form action="#" data-dev="" class="modal__form form-modal">
+                        <div class="form-modal__fields">
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Имя*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Фамилия*" class="input__field">
+                            </div>
+                            <div class="form-modal__input input">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Отчество" class="input__field">
+                            </div>
+                            <div class="form-modal__input input">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Должность" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Компания потребитель*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="text" name="form[]" placeholder="Адрес объекта, где установлен привод*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-validate="" data-required="" autocomplete="off" type="email" name="form[]" placeholder="Электронная почта*" class="input__field">
+                            </div>
+                            <div data-hint="Поле обязательно к заполению" class="form-modal__input input">
+                                <input data-tel-mask="" data-validate="" data-required="" autocomplete="off" type="tel" name="form[]" placeholder="Номер телефона*" class="input__field">
+                            </div>
+                        </div>
+                        <div class="form-modal__group">
+                            <button type="submit" class="form-modal__btn btn btn_primary btn_primary_fw">
+                                <span class="btn__txt txt22 txt22_sb">Отправить</span>
+                            </button>
+                            <p class="form-modal__text">
+                                Нажимая «Отправить» вы подтверждаете, что согласны на обработку персональных
+                                данных
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- подобрать электропривод -->
 <div id="productSelectionModal" aria-hidden="true" class="modal modal_product-selection">
     <div class="modal__wrapper">
