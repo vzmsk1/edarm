@@ -195,10 +195,12 @@
     }
 
     &__heading {
+        margin-bottom: 6.4rem;
+
         color: $blue;
 
-        &:not(.hero-stock-chapter_has-image &) {
-            margin-bottom: 6.4rem;
+        .hero-stock-chapter_has-image & {
+            margin-bottom: 0;
         }
 
         @media (min-width: 48em) {

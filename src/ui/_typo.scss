@@ -1,7 +1,11 @@
 .h {
     font-family: 'Framer Sans';
-    font-weight: 600;
+    font-weight: 500;
     line-height: 120%;
+
+    @media (max-width: 48em) {
+        font-weight: 600;
+    }
 
     &_blue {
         color: $blue;

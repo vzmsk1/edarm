@@ -28,6 +28,13 @@
         }
     }
 
+    &__close-btn {
+        &.i-btn svg {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
     &__hamburger-btn {
         &.i-btn {
             display: none;
@@ -156,7 +163,7 @@
         }
 
         &__head {
-            margin-bottom: 5rem;
+            margin-bottom: 10rem;
 
             display: flex;
             align-items: center;

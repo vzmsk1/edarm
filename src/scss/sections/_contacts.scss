@@ -20,6 +20,10 @@
         }
     }
 
+    &__heading {
+        text-transform: uppercase;
+    }
+
     &__body {
         display: flex;
         flex-direction: column;

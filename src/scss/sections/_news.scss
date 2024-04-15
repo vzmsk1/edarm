@@ -24,6 +24,8 @@
         display: inline-flex;
         column-gap: 1rem;
 
+        text-transform: uppercase;
+
         &::after {
             content: attr(data-quantity);
 

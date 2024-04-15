@@ -124,6 +124,7 @@
 
             .modal & {
                 flex-direction: row;
+                align-items: center;
                 column-gap: 17rem;
             }
         }
@@ -241,6 +242,10 @@
 
     &__text {
         display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
 
         @media (max-width: 48em) {
             font-size: 3.2rem;

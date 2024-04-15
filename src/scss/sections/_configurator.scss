@@ -15,6 +15,10 @@
     &__heading {
         color: $blue;
 
+        .configurator_hero & {
+            text-transform: uppercase;
+        }
+
         @media (max-width: 48em) {
             display: block;
             max-width: 57rem;
@@ -96,11 +100,12 @@
         flex-direction: column;
 
         @media (min-width: 48em) {
-            align-self: flex-start;
             flex: 1 1 auto;
 
             .configurator_hero & {
                 padding: 3.2rem;
+
+                align-self: flex-start;
 
                 border: 1px solid #00478066;
             }
@@ -110,10 +115,17 @@
     &__subtitle {
         margin-bottom: 6rem;
 
+        font-family: 'Framer Sans';
         font-weight: 600;
         font-size: 3.2rem;
         line-height: 3.6rem;
         color: $blue;
+
+        .configurator_hero & {
+            margin-bottom: 4rem;
+
+            max-width: 58rem;
+        }
 
         @media (max-width: 48em) {
             margin-bottom: 3.2rem;
@@ -123,6 +135,8 @@
 
             .configurator_hero & {
                 margin-bottom: 4.8rem;
+
+                max-width: none;
             }
         }
     }

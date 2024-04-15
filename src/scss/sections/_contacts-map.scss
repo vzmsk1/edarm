@@ -12,6 +12,12 @@
         }
     }
 
+    &__heading {
+        @media (max-width: 48em) {
+            line-height: 12.8rem;
+        }
+    }
+
     &__body {
         display: flex;
         gap: 1.6rem;
@@ -37,7 +43,6 @@
                 background-color: $blue;
 
                 transition:
-                    background-color 0.3s ease,
                     color 0.3s ease,
                     margin 0.3s ease,
                     padding 0.3s ease,
@@ -101,13 +106,15 @@
     cursor: pointer;
 
     rect,
-    path#path-rect {
+    path#path-rect,
+    path#markPointerPath {
         transition: fill 0.3s ease;
     }
 
     &._is-active {
         rect,
-        path#path-rect {
+        path#path-rect,
+        path#markPointerPath {
             fill: $blue;
         }
     }
@@ -145,7 +152,11 @@
     }
 
     &__list {
-        padding: 0 1.6rem;
+        padding: 0 1.6rem 0 5rem;
+
+        @media (max-width: 48em) {
+            padding: 0 2.8rem;
+        }
     }
 
     &__list-item {

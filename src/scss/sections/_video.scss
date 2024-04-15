@@ -1,11 +1,13 @@
 .video {
     position: relative;
 
-    margin-bottom: 42rem;
+    margin-bottom: 36rem;
 
     background-color: $blue;
 
     @media (min-width: 48em) {
+        margin-bottom: 4.2rem;
+
         &::before {
             content: '';
 
