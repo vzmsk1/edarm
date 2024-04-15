@@ -63,6 +63,26 @@
                     <a target="_blank" href="./not-found.html">404</a>
                 </li>
             </ol>
+            <h2>модалки:</h2>
+            <ol>
+                <li>
+                    <button type="button" data-modal="#requestModal">оставить заявку</button>
+                </li>
+
+                <li>
+                    <button type="button" data-modal="#requestServiceCenterModal">
+                        оставить заявку (сервисный центр)
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" data-modal="#productSelectionModal">подобрать электропривод</button>
+                </li>
+
+                <li>
+                    <button type="button" data-modal="#requestSendModal">заявка отправлена</button>
+                </li>
+            </ol>
             <a target="_blank" href="./ui.html">*ui*</a>
         </div>
         <style>
@@ -91,47 +111,47 @@
                 padding: 5rem 0;
                 font-size: 100%;
                 line-height: 1;
-                font-size: 2.5rem;
+                font-size: 1.8rem;
                 user-select: none;
             }
             .root {
                 font-family: 'Source Code Pro';
             }
-            ul,
-            ol {
+            .root ul,
+            .root ol {
                 margin-bottom: 10rem;
             }
-            ul li,
-            ol li {
+            .root ul li,
+            .root ol li {
                 font-size: 2.3rem;
             }
-            li {
+            .root li {
                 margin-bottom: 2rem;
                 font-size: 2rem;
                 text-transform: lowercase;
             }
-            a {
+            .root a {
                 text-decoration: none;
             }
-            a {
+            .root a {
                 color: #202020;
                 transition: color 0.5s ease;
             }
-            a:visited {
+            .root a:visited {
                 text-decoration: none;
                 color: #202020;
             }
-            a:hover {
+            .root a:hover {
                 color: #202020;
                 text-decoration: underline;
             }
-            h1 {
+            .root h1 {
                 margin-bottom: 5rem;
                 font-size: 5rem;
                 font-weight: 300;
                 text-align: center;
             }
-            h2 {
+            .root h2 {
                 margin-bottom: 2.5rem;
                 font-size: 2.5rem;
                 font-weight: 300;
@@ -144,9 +164,13 @@
             }
             @media (max-width: 48em) {
                 html {
-                    font-size: 1.5625vw;
+                    font-size: calc((100 / 375) * 5vw);
+                }
+                body {
+                    font-size: 2.8rem;
                 }
             }
         </style>
+        <include src="./components/modals.html"></include>
     </body>
 </html>

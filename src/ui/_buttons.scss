@@ -160,6 +160,8 @@
         width: 1.5rem;
         height: 1.5rem;
 
+        transition: transform 0.3s ease;
+
         @media (max-width: 48em) {
             width: 3.2rem;
             height: 3.2rem;
@@ -176,6 +178,26 @@
 
         svg {
             fill: $blue;
+        }
+    }
+
+    &_prev {
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: translateX(-30%);
+                }
+            }
+        }
+    }
+
+    &_next {
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: translateX(30%);
+                }
+            }
         }
     }
 }

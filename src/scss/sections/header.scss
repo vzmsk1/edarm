@@ -97,10 +97,37 @@
     }
 
     &__nav-link {
+        position: relative;
+
         font-family: 'Framer Sans';
         font-size: 2.4rem;
         line-height: 2.9rem;
         font-weight: 300;
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    transform: scaleX(1) translate(-100%, -50%);
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 50%;
+            left: -0.8rem;
+
+            width: 2rem;
+            height: 1px;
+
+            background-color: $white;
+
+            transform: scaleX(0) translate(-100%, -50%);
+
+            transition: transform 0.3s ease;
+        }
 
         @media (max-width: 48em) {
             font-size: 3.8rem;

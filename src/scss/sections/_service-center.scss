@@ -48,9 +48,15 @@
             margin-bottom: 4.8rem;
 
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            justify-content: space-between;
+            grid-template-columns: repeat(2, auto);
             row-gap: 2.6rem;
+            column-gap: 8rem;
+            justify-content: start;
+        }
+
+        @media (min-width: 48em) {
+            justify-content: stretch;
+            column-gap: 8rem;
         }
     }
 
@@ -155,10 +161,6 @@
 
     @media (max-width: 48em) {
         row-gap: 1.6rem;
-
-        &:nth-child(2n) {
-            justify-self: end;
-        }
     }
 
     &__icon {
@@ -188,8 +190,6 @@
     }
 
     &__text {
-        max-width: 18.1rem;
-
         @media (max-width: 48em) {
             max-width: 28rem;
         }
