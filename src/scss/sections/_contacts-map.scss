@@ -126,7 +126,7 @@
     flex-direction: column;
     row-gap: 3.6rem;
 
-    transition: flex 0.3s ease 0.3s;
+    transition: flex 0.3s ease 0.5s;
 
     @media (max-width: 48em) {
         row-gap: 3.2rem;
@@ -134,6 +134,7 @@
     @media (min-width: 48em) {
         &._is-active {
             flex: 1 1 auto;
+            transition: flex 0.3s ease 0.3s;
         }
     }
 
