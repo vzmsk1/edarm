@@ -3,6 +3,7 @@ import 'swiper/css';
 import { remToPx } from '../utils/utils';
 import { Navigation, Autoplay, Pagination, EffectFade, Thumbs } from 'swiper/modules';
 import { gsap } from 'gsap';
+import { modules } from '../modules';
 
 window.addEventListener('load', function () {
     const mm = window.matchMedia('(max-width:768px)');
@@ -60,10 +61,12 @@ window.addEventListener('load', function () {
     }
 
     if (document.querySelector('.documentation__swiper')) {
-        new Swiper('.documentation__swiper', {
+        const docsModalSwiper = document.querySelector('.docs-modal-swiper');
+
+        const docsSwiperInstance = new Swiper('.documentation__swiper', {
             modules: [Navigation, Autoplay],
             speed: 800,
-            loop: true,
+            rewind: true,
             spaceBetween: remToPx(1.6),
             autoplay: {
                 delay: AUTOPLAY_DELAY,
@@ -77,6 +80,33 @@ window.addEventListener('load', function () {
                 768: {
                     slidesPerView: 3
                 }
+            }
+        });
+
+        new Swiper('.docs-modal-swiper', {
+            modules: [Navigation],
+            speed: 800,
+            rewind: true,
+            grabCursor: true,
+            navigation: {
+                prevEl: '.modal_docs .i-btn_prev',
+                nextEl: '.modal_docs .i-btn_next'
+            },
+            on: {
+                slideChange: (swiper) => {
+                    docsSwiperInstance.slideTo(swiper.realIndex);
+                }
+            }
+        });
+
+        document.addEventListener('aftermodalClose', function (e) {
+            if (e.detail.modal.hash.replace('#', '') === docsModalSwiper.closest('.modal').id) {
+                docsSwiperInstance.autoplay.resume();
+            }
+        });
+        document.addEventListener('aftermodalOpen', function (e) {
+            if (e.detail.modal.hash.replace('#', '') === docsModalSwiper.closest('.modal').id) {
+                docsSwiperInstance.autoplay.pause();
             }
         });
     }

@@ -37,6 +37,53 @@ body::after {
 
     transition: visibility 0.8s ease 0s;
 
+    &_docs {
+        .modal {
+            &__body {
+                padding: 0;
+            }
+            &__content {
+                max-width: none;
+                background-color: transparent;
+            }
+            &__close {
+                top: 0;
+                right: 5rem;
+
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                }
+                @media (max-width: 48em) {
+                    top: -10rem;
+                    right: 1rem;
+                }
+            }
+        }
+
+        .i-btn {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 5rem;
+
+            flex: 0 0 6rem;
+            width: 6rem;
+            height: 6rem;
+
+            transform: translateY(-50%);
+
+            &.i-btn_next {
+                left: auto;
+                right: 5rem;
+            }
+
+            @media (max-width: 48em) {
+                display: none;
+            }
+        }
+    }
+
     &_product-selection {
         padding: 0;
     }
@@ -102,7 +149,6 @@ body::after {
         .lock & {
             visibility: visible;
         }
-
         @media (min-width: 48em) {
             max-width: 80rem;
 
@@ -261,6 +307,22 @@ body::after {
 
         display: flex;
         flex-direction: column;
+    }
+
+    &__swiper {
+        width: 100%;
+    }
+}
+
+.docs-modal-swiper {
+    &__image-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 66.5rem;
     }
 }
 
