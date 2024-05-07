@@ -1,9 +1,5 @@
-import Swiper from 'swiper';
-import 'swiper/css';
 import { remToPx } from '../utils/utils';
-import { Navigation, Autoplay, Pagination, EffectFade, Thumbs } from 'swiper/modules';
 import { gsap } from 'gsap';
-import { modules } from '../modules';
 
 window.addEventListener('load', function () {
     const mm = window.matchMedia('(max-width:768px)');
@@ -20,7 +16,6 @@ window.addEventListener('load', function () {
 
     if (document.querySelector('.hero__swiper')) {
         new Swiper('.hero__swiper', {
-            modules: [Navigation, Autoplay, Pagination, EffectFade],
             speed: 800,
             loop: true,
             effect: 'fade',
@@ -64,7 +59,6 @@ window.addEventListener('load', function () {
         const docsModalSwiper = document.querySelector('.docs-modal-swiper');
 
         const docsSwiperInstance = new Swiper('.documentation__swiper', {
-            modules: [Navigation, Autoplay],
             speed: 800,
             rewind: true,
             spaceBetween: remToPx(1.6),
@@ -84,7 +78,6 @@ window.addEventListener('load', function () {
         });
 
         new Swiper('.docs-modal-swiper', {
-            modules: [Navigation],
             speed: 800,
             rewind: true,
             grabCursor: true,
@@ -124,7 +117,6 @@ window.addEventListener('load', function () {
             }
         });
         new Swiper('.product__swiper', {
-            modules: [Thumbs],
             speed: 800,
             spaceBetween: remToPx(1.6),
             thumbs: {
@@ -136,7 +128,6 @@ window.addEventListener('load', function () {
 
     if (document.querySelector('.collections__swiper')) {
         new Swiper('.collections__swiper', {
-            modules: [Navigation, Autoplay],
             speed: 800,
             rewind: true,
             slidesPerView: 'auto',
@@ -164,7 +155,6 @@ window.addEventListener('load', function () {
             let servicesSwiper = null;
 
             new Swiper('.services__swiper', {
-                modules: [Navigation, Autoplay],
                 speed: 800,
                 rewind: true,
                 spaceBetween: remToPx(1.2),
