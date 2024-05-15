@@ -1,7 +1,25 @@
 .footer {
+    position: relative;
     padding: 5.2rem 0;
-    background-color: $blue;
     color: $white;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 110vw;
+        height: 100%;
+
+        background-color: $blue;
+
+        @media (min-width: 1760px) {
+            left: calc((100vw - 176rem) / -2);
+        }
+    }
 
     &__container {
         display: flex;

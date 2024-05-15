@@ -164,3 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
         initTabsOnResize();
     });
 });
+
+window.addEventListener('load', function () {
+    document.body.style.opacity = 1;
+});

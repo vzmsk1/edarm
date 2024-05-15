@@ -20,10 +20,10 @@ window.addEventListener('load', function () {
             loop: true,
             effect: 'fade',
             fadeEffect: { crossFade: true },
-            autoplay: {
-                delay: AUTOPLAY_DELAY,
-                disableOnInteraction: false
-            },
+            // autoplay: {
+            //     delay: AUTOPLAY_DELAY,
+            //     disableOnInteraction: false
+            // },
             pagination: {
                 el: '.hero__swiper-fraction',
                 type: 'custom',
@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
                 afterInit: (swiper) => {
                     swiper.autoplay.stop();
                     setTimeout(() => {
-                        swiper.autoplay.start();
+                        // swiper.autoplay.start();
                         startProgressbar();
                     }, 0);
                 },

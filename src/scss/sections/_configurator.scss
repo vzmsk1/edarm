@@ -101,7 +101,8 @@
         flex-direction: column;
 
         @media (min-width: 48em) {
-            flex: 1 1 auto;
+            justify-content: flex-start;
+            flex: 0 0 50%;
 
             .configurator_hero & {
                 padding: 3.2rem;
@@ -361,10 +362,11 @@
     }
 
     &__image-wrap {
-        height: 100%;
+        height: 20rem;
 
-        @media (max-width: 48em) {
-            height: 20rem;
+        @media (min-width: 48em) {
+            height: 100%;
+            width: 19rem;
         }
     }
 
