@@ -30,6 +30,7 @@
 
         display: grid;
         grid-template-columns: 102rem 1fr;
+        align-content: start;
         gap: 1.6rem;
 
         @media (max-width: 48em) {
