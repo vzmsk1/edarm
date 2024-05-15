@@ -76,6 +76,7 @@
     @media (min-width: 48em) {
         grid-template-columns: 1fr 42.9rem;
         column-gap: 16.4rem;
+        align-content: start;
     }
 
     &__content {

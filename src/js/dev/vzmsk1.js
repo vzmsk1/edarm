@@ -128,9 +128,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         // if ((data.size / 1048576).toFixed(2) > maxSize) {
                         // text.innerHTML = 'Большой размер файла';
                         if (!extensions.includes(data.extension)) {
-                            // text.innerHTML = 'Файл должен иметь формат jpeg,jpg,png,webp, или pdf';
+                            input.closest('.input').classList.add('_has-error');
+                            input.nextElementSibling.innerHTML =
+                                'Файл должен иметь формат jpeg,jpg,png,webp,doc или pdf';
                             return;
                         } else {
+                            input.closest('.input').classList.remove('_has-error');
                             input.closest('.input').classList.add('_is-filled');
 
                             if (input.nextElementSibling) {

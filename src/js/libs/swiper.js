@@ -62,10 +62,10 @@ window.addEventListener('load', function () {
             speed: 800,
             rewind: true,
             spaceBetween: remToPx(1.6),
-            autoplay: {
-                delay: AUTOPLAY_DELAY,
-                disableOnInteraction: false
-            },
+            // autoplay: {
+            //     delay: AUTOPLAY_DELAY,
+            //     disableOnInteraction: false
+            // },
             navigation: {
                 prevEl: '.documentation__head .i-btn_prev',
                 nextEl: '.documentation__head .i-btn_next'

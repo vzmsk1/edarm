@@ -31,6 +31,13 @@ textarea {
             &::after {
                 content: attr(data-size);
             }
+            .input__field {
+                width: 89%;
+
+                @media (max-width: 48em) {
+                    width: 85%;
+                }
+            }
             .input__placeholder {
                 &::after {
                     content: none;
