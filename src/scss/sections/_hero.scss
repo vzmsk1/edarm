@@ -40,9 +40,11 @@
         justify-self: end;
 
         @media (min-width: 48em) {
-            right: 8rem;
-            bottom: 21.8rem;
-            justify-self: unset;
+            &.swiper-pagination-horizontal.swiper-pagination-custom {
+                right: 8rem;
+                bottom: 21.8rem;
+                justify-self: unset;
+            }
         }
     }
 
