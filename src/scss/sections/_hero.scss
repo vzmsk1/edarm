@@ -7,6 +7,13 @@
 
     &__container {
         position: relative;
+
+        @media (min-width: 48em) {
+            &.container {
+                margin: 0;
+                width: auto;
+            }
+        }
     }
 
     &__swiper-fraction,
@@ -23,7 +30,7 @@
         align-self: center;
 
         @media (min-width: 48em) {
-            left: 0;
+            left: 8rem;
             bottom: 11rem;
             align-self: unset;
         }
@@ -33,7 +40,7 @@
         justify-self: end;
 
         @media (min-width: 48em) {
-            right: 0;
+            right: 8rem;
             bottom: 21.8rem;
             justify-self: unset;
         }
@@ -85,11 +92,13 @@
     &__inner {
         position: relative;
         z-index: 2;
+        margin: 0 auto;
         padding-top: 29.4rem;
         padding-bottom: 14rem;
         display: grid;
         justify-items: start;
         height: 100%;
+        width: 176rem;
 
         @media (min-width: 48em) {
             padding-top: 30.9rem;
@@ -134,7 +143,7 @@
     &__bg {
         position: absolute;
         top: 0;
-        left: 0;
+        left: calc((100vw - 1920px) / -2);
         width: 100vw;
         height: 100%;
 
@@ -148,13 +157,13 @@
             background-color: rgba(19, 19, 19, 0.6);
         }
 
+        @media (max-width: 1920px) and (min-width: 48em) {
+            left: 0;
+        }
+
         @media (max-width: 48em) {
             left: -2.4rem;
             height: calc(100% + 34.4rem);
-        }
-
-        @media (min-width: 1760px) {
-            left: calc((100vw - 176rem) / -2);
         }
     }
 
