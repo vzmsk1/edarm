@@ -204,6 +204,9 @@
         }
 
         &__nav {
+            position: relative;
+            z-index: 502;
+
             margin-bottom: 6.4rem;
 
             display: flex;
@@ -212,6 +215,9 @@
         }
 
         &__btn {
+            position: relative;
+            z-index: 502;
+
             align-self: flex-start;
         }
     }
