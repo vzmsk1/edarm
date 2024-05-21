@@ -158,6 +158,10 @@
 
     &__type {
         flex: 1 1 auto;
+
+        @media (max-width: 48em) {
+            flex: 0 0 48.5%;
+        }
     }
 
     &__fields {

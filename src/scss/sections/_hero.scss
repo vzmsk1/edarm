@@ -30,9 +30,11 @@
         align-self: center;
 
         @media (min-width: 48em) {
-            left: 8rem;
-            bottom: 11rem;
-            align-self: unset;
+            &.swiper-pagination-custom.swiper-pagination-horizontal {
+                left: 8rem;
+                bottom: 11rem;
+                align-self: unset;
+            }
         }
     }
 
@@ -40,7 +42,7 @@
         justify-self: end;
 
         @media (min-width: 48em) {
-            &.swiper-pagination-horizontal.swiper-pagination-custom {
+            &.swiper-navigation-hero {
                 right: 8rem;
                 bottom: 21.8rem;
                 justify-self: unset;
@@ -100,7 +102,7 @@
         display: grid;
         justify-items: start;
         height: 100%;
-        width: 176rem;
+        width: auto;
 
         @media (min-width: 48em) {
             padding-top: 30.9rem;
@@ -108,6 +110,7 @@
             grid-template-columns: 86rem 1fr;
             column-gap: 32.5rem;
             row-gap: 4rem;
+            width: 176rem;
         }
     }
 
